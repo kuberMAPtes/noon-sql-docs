@@ -1,6 +1,6 @@
 
 # 디비 사용
-USE test_db;
+#USE test_db;
 # 업데이트 권한을 준다.
 #SET SQL_SAFE_UPDATES = 0;
 
