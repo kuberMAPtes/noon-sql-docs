@@ -1,8 +1,8 @@
 
 # 디비 사용
-#USE test_db;
+USE test_db;
 # 업데이트 권한을 준다.
-#SET SQL_SAFE_UPDATES = 0;
+SET SQL_SAFE_UPDATES = 0;
 
 DROP PROCEDURE IF EXISTS drop_tb;
 DROP PROCEDURE IF EXISTS drop_all_tb;
@@ -240,6 +240,7 @@ DELIMITER $$
 CREATE PROCEDURE insert_sample_zzims()
 BEGIN
     DECLARE i INT DEFAULT 2;
+    DECLARE random_provider_id VARCHAR(255);
 
     -- 먼저 member_1의 건물 구독 데이터 삽입
     INSERT INTO zzim (
@@ -280,6 +281,11 @@ BEGIN
 
     -- 49명의 회원은 49개의 빌딩 ID를 가지고, 피드 ID는 NULL
     WHILE i <= 100 DO
+        IF RAND() < 0.5 THEN
+            SET random_provider_id = CONCAT('member_', i); -- member_id와 동일
+        ELSE
+            SET random_provider_id = CONCAT('member_', FLOOR(1 + (RAND() * 99))); -- 랜덤
+        END IF;
         INSERT INTO zzim (
             member_id,
             feed_id,
@@ -291,7 +297,7 @@ BEGIN
             CONCAT('member_', i), -- member_id
             NULL, -- feed_id
             9999 + i, -- building_id (10051 ~ 10099)
-            NULL, -- subscription_provider_id
+            random_provider_id, -- subscription_provider_id
             'SUBSCRIPTION', -- zzim_type (예시 값)
             TRUE -- activated
         );
@@ -300,6 +306,7 @@ BEGIN
 END$$
 
 DELIMITER ;
+
 
 ########################################################### 피드 예시 데이터 입력###############################################################
 DELIMITER $$
@@ -441,7 +448,12 @@ BEGIN
         ) VALUES (
             CONCAT('member_', i), -- receiver_id (member_1 ~ member_100)
             CONCAT('Notification text ', i), -- notification_text
-            IF(MOD(i, 2) = 0, 'COMMENT', 'LIKE') -- notification_type (짝수는 COMMENT, 홀수는 LIKE)
+            CASE 
+				WHEN MOD(i,3)=0 THEN 'COMMENT'
+                WHEN MOD(i,3)=1 THEN 'LIKE'
+                WHEN MOD(i,3)=2 THEN 'REPORT'
+                END
+            -- notification_type (짝수는 COMMENT, 홀수는 LIKE)
         );
         SET i = i + 1;
     END WHILE;
@@ -709,7 +721,7 @@ CREATE TABLE notification (
     notification_id INT PRIMARY KEY AUTO_INCREMENT,
     receiver_id VARCHAR(20) NOT NULL,
     notification_text VARCHAR(300) NOT NULL,
-    notification_type ENUM('COMMENT','LIKE') NOT NULL,
+    notification_type ENUM('COMMENT','LIKE','REPORT') NOT NULL,
     FOREIGN KEY (receiver_id) REFERENCES members(member_id)
 );
 ALTER TABLE notification AUTO_INCREMENT = 10000;
@@ -802,3 +814,10 @@ SELECT * FROM member_relationship;
 SELECT * FROM chat_apply;
 SELECT * FROM chatroom;
 SELECT * FROM chat_entrance;
+
+###자기 자신이 스스로 구독한 사람이 없어서 한 명 추가.
+UPDATE zzim SET building_id=10000,subscription_provider_id='member_1',zzim_type='SUBSCRIPTION' WHERE zzim_id=10000;
+##95이상 activated가 false 되어있는데 꼭 그런 것은 아님!(그럴 때도 있지만)
+UPDATE feed_attachment SET blurred_file_url = NULL WHERE attachment_id=10096;
+UPDATE feed_attachment SET blurred_file_url = NULL WHERE attachment_id=10098;
+UPDATE feed SET building_id = NULL WHERE feed_category = 'NOTICE';

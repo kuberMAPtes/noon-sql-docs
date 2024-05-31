@@ -2,7 +2,7 @@
 # 디비 사용
 USE test_db;
 # 업데이트 권한을 준다.
-#SET SQL_SAFE_UPDATES = 0;
+SET SQL_SAFE_UPDATES = 0;
 
 DROP PROCEDURE IF EXISTS delete_all_rows;
 DROP PROCEDURE IF EXISTS drop_tb;
@@ -324,7 +324,7 @@ BEGIN
                 WHEN MOD(i, 9) = 5 THEN 'SHARE'
                 WHEN MOD(i, 9) = 6 THEN 'HELP_REQUEST'
                 WHEN MOD(i, 9) = 7 THEN 'MEGAPHONE'
-		WHEN MOD(i, 9) = 8 THEN 'NOTICE'
+				WHEN MOD(i, 9) = 8 THEN 'NOTICE'
                 ELSE 'GENERAL'
             END, -- feed_category (예시 값)
             base_id + i, -- view_cnt
@@ -357,11 +357,19 @@ DELIMITER $$
 CREATE PROCEDURE insert_sample_zzims()
 BEGIN
     DECLARE i INT DEFAULT 1;
+    DECLARE random_provider_id VARCHAR(255);
 
     -- 1000명의 회원에게 데이터 삽입
     WHILE i <= 1000 DO
         IF MOD(i, 3) = 0 THEN
             -- subscription 유형의 경우
+            -- subscription_provider_id가 NULL이 아니도록 보장
+            IF RAND() < 0.5 THEN
+                SET random_provider_id = CONCAT('member_', i); -- member_id와 동일
+            ELSE
+                SET random_provider_id = CONCAT('member_', FLOOR(1 + (RAND() * 999))); -- 랜덤
+            END IF;
+
             INSERT INTO zzim (
                 member_id,
                 feed_id,
@@ -372,8 +380,8 @@ BEGIN
             ) VALUES (
                 CONCAT('member_', i), -- member_id
                 NULL, -- feed_id
-                10000 + FLOOR(RAND() * 3000) + 1, -- building_id (10001 ~ 13000)
-                IF(RAND() < 0.5, CONCAT('member_', FLOOR(1 + (RAND() * 999))), NULL), -- subscription_provider_id (랜덤으로 존재할 수도 있음)
+                10000 + FLOOR(RAND() * 2999), -- building_id (10000 ~ 12999)
+                random_provider_id, -- subscription_provider_id
                 'SUBSCRIPTION', -- zzim_type
                 TRUE -- activated
             );
@@ -508,7 +516,11 @@ BEGIN
         ) VALUES (
             CONCAT('member_', i), -- receiver_id (member_1 ~ member_100)
             CONCAT('Notification text ', i), -- notification_text
-            IF(MOD(i, 2) = 0, 'COMMENT', 'LIKE') -- notification_type (짝수는 COMMENT, 홀수는 LIKE)
+                            CASE MOD(i,3)
+					WHEN 0 THEN 'COMMENT'
+                    WHEN 1 THEN 'LIKE'
+                    WHEN 2 THEN 'REPORT'
+                    END -- notification_type (COMMENT, LIKE,REPORT)
         );
         SET i = i + 1;
     END WHILE;
@@ -776,7 +788,7 @@ CREATE TABLE notification (
     notification_id INT PRIMARY KEY AUTO_INCREMENT,
     receiver_id VARCHAR(20) NOT NULL,
     notification_text VARCHAR(300) NOT NULL,
-    notification_type ENUM('COMMENT','LIKE') NOT NULL,
+    notification_type ENUM('COMMENT','LIKE','REPORT') NOT NULL,
     FOREIGN KEY (receiver_id) REFERENCES members(member_id)
 );
 ALTER TABLE notification AUTO_INCREMENT = 10000;
@@ -873,8 +885,7 @@ SELECT * FROM chatroom;
 CALL insert_sample_chat_entrances();
 SELECT * FROM chat_entrance;
 
-
-
-
-
-
+UPDATE zzim SET building_id=10000,subscription_provider_id='member_1',zzim_type='SUBSCRIPTION' WHERE zzim_id=10000;
+UPDATE feed_attachment SET blurred_file_url = NULL WHERE attachment_id=10096;
+UPDATE feed_attachment SET blurred_file_url = NULL WHERE attachment_id=10098;
+UPDATE feed SET building_id = NULL WHERE feed_category = 'NOTICE';
