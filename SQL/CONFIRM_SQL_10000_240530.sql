@@ -324,6 +324,7 @@ BEGIN
                 WHEN MOD(i, 9) = 5 THEN 'SHARE'
                 WHEN MOD(i, 9) = 6 THEN 'HELP_REQUEST'
                 WHEN MOD(i, 9) = 7 THEN 'MEGAPHONE'
+		WHEN MOD(i, 9) = 8 THEN 'NOTICE'
                 ELSE 'GENERAL'
             END, -- feed_category (예시 값)
             base_id + i, -- view_cnt
@@ -708,7 +709,7 @@ title VARCHAR(40) NOT NULL,
 feed_text VARCHAR(4000) NOT NULL,
 view_cnt BIGINT NOT NULL,
 written_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-feed_category ENUM('GENERAL','COMPLIMENT','QUESTION','EVENT','POLL','SHARE','HELP_REQUEST','MEGAPHONE') NOT NULL DEFAULT 'GENERAL',
+feed_category ENUM('GENERAL','COMPLIMENT','QUESTION','EVENT','POLL','SHARE','HELP_REQUEST','MEGAPHONE','NOTICE') NOT NULL DEFAULT 'GENERAL',
 modified BOOLEAN NOT NULL DEFAULT FALSE,
 activated BOOLEAN NOT NULL DEFAULT TRUE,
 FOREIGN KEY (building_id) REFERENCES building(building_id),
