@@ -604,7 +604,7 @@ CREATE TABLE building (
     road_addr VARCHAR(100),
     longitude DOUBLE,
     latitude DOUBLE,
-    feed_ai_summary VARCHAR(1000)
+    feed_ai_summary VARCHAR(100)
 );
 ALTER TABLE building AUTO_INCREMENT = 10000;
 CREATE INDEX idx_building_building_name ON building(building_name);
