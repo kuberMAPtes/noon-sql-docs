@@ -1,6 +1,6 @@
 
 # 디비 사용
-#USE test_db;
+USE test_db;
 # 업데이트 권한을 준다.
 #SET SQL_SAFE_UPDATES = 0;
 
@@ -703,7 +703,7 @@ CREATE INDEX idx_members_nickname ON members(nickname);
 feed_id INT PRIMARY KEY AUTO_INCREMENT,
 writer_id VARCHAR(20) NOT NULL,
 building_id INT NULL,
-main_activated BOOLEAN NULL,
+main_activated BOOLEAN NOT NULL DEFAULT FALSE,
 public_range ENUM('PUBLIC','FOLLOWER_ONLY','MUTUAL_ONLY','PRIVATE') NOT NULL DEFAULT 'PUBLIC',
 title VARCHAR(40) NOT NULL,
 feed_text VARCHAR(4000) NOT NULL,
