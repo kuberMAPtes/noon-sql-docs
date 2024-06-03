@@ -821,3 +821,9 @@ UPDATE zzim SET building_id=10000,subscription_provider_id='member_1',zzim_type=
 UPDATE feed_attachment SET blurred_file_url = NULL WHERE attachment_id=10096;
 UPDATE feed_attachment SET blurred_file_url = NULL WHERE attachment_id=10098;
 UPDATE feed SET building_id = NULL WHERE feed_category = 'NOTICE';
+INSERT INTO member_relationship(member_relationship_id,from_id,to_id,relationship_type,activated) VALUES
+(10100,'member_1','member_3','BLOCK',1),
+(10101,'member_1','member_4','FOLLOW',1),
+(10102,'member_1','member_5','FOLLOW',1),
+(10103,'member_1','member_6','FOLLOW',1),
+(10104,'member_99','member_1','FOLLOW',1);
