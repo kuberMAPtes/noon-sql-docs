@@ -638,7 +638,7 @@ CREATE TABLE members (
 	building_subscription_public_range ENUM('PUBLIC','FOLLOWER_ONLY','MUTUAL_ONLY','PRIVATE'),
     all_feed_public_range ENUM('PUBLIC','FOLLOWER_ONLY','MUTUAL_ONLY','PRIVATE'),
     member_profile_public_range ENUM('PUBLIC','FOLLOWER_ONLY','MUTUAL_ONLY','PRIVATE'),
-    receiving_all_notification_allowed BOOLEAN
+    receiving_all_notification_allowed BOOLEAN NOT NULL DEFAULT FALSE
     );
     
 CREATE INDEX idx_members_member_id ON members(member_id);
