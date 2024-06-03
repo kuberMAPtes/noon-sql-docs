@@ -120,7 +120,7 @@ CREATE TABLE members (
 	member_id VARCHAR(20) PRIMARY KEY,
     member_role ENUM('MEMBER','ADMIN') NOT NULL DEFAULT 'MEMBER',
     nickname VARCHAR(30) UNIQUE NOT NULL,
-    pwd VARCHAR(30) NOT NULL,
+    pwd VARCHAR(100) NOT NULL,
 	phone_number VARCHAR(20) UNIQUE NOT NULL,
     unlock_time DATETIME NULL DEFAULT '0001-01-01 01:01:01',
     profile_photo_url TEXT NULL,
@@ -130,7 +130,7 @@ CREATE TABLE members (
 	building_subscription_public_range ENUM('PUBLIC','FOLLOWER_ONLY','MUTUAL_ONLY','PRIVATE'),
     all_feed_public_range ENUM('PUBLIC','FOLLOWER_ONLY','MUTUAL_ONLY','PRIVATE'),
     member_profile_public_range ENUM('PUBLIC','FOLLOWER_ONLY','MUTUAL_ONLY','PRIVATE'),
-    receiving_all_notification_allowed BOOLEAN
+    receiving_all_notification_allowed BOOLEAN NOT NULL DEFAULT FALSE
     );
     
 CREATE INDEX idx_members_member_id ON members(member_id);
