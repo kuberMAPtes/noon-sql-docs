@@ -702,9 +702,9 @@ CREATE TABLE members (
     profile_intro VARCHAR(200) NULL ,
     dajung_score INT NOT NULL DEFAULT 0,
     signed_off BOOLEAN NOT NULL DEFAULT FALSE,
-	building_subscription_public_range ENUM('PUBLIC','FOLLOWER_ONLY','MUTUAL_ONLY','PRIVATE'),
-    all_feed_public_range ENUM('PUBLIC','FOLLOWER_ONLY','MUTUAL_ONLY','PRIVATE'),
-    member_profile_public_range ENUM('PUBLIC','FOLLOWER_ONLY','MUTUAL_ONLY','PRIVATE'),
+	building_subscription_public_range ENUM('PUBLIC','FOLLOWER_ONLY','MUTUAL_ONLY','PRIVATE') DEFAULT 'PUBLIC',
+    all_feed_public_range ENUM('PUBLIC','FOLLOWER_ONLY','MUTUAL_ONLY','PRIVATE') DEFAULT 'PUBLIC',
+    member_profile_public_range ENUM('PUBLIC','FOLLOWER_ONLY','MUTUAL_ONLY','PRIVATE') DEFAULT 'PUBLIC',
     receiving_all_notification_allowed BOOLEAN
     );
     
