@@ -628,7 +628,7 @@ CREATE TABLE members (
 	member_id VARCHAR(20) PRIMARY KEY,
     member_role ENUM('MEMBER','ADMIN') NOT NULL DEFAULT 'MEMBER',
     nickname VARCHAR(30) UNIQUE NOT NULL,
-    pwd VARCHAR(30) NOT NULL,
+    pwd VARCHAR(100) NOT NULL,
 	phone_number VARCHAR(20) UNIQUE NOT NULL,
     unlock_time DATETIME NULL DEFAULT '0001-01-01 01:01:01',
     profile_photo_url TEXT NULL,
@@ -821,3 +821,9 @@ UPDATE zzim SET building_id=10000,subscription_provider_id='member_1',zzim_type=
 UPDATE feed_attachment SET blurred_file_url = NULL WHERE attachment_id=10096;
 UPDATE feed_attachment SET blurred_file_url = NULL WHERE attachment_id=10098;
 UPDATE feed SET building_id = NULL WHERE feed_category = 'NOTICE';
+INSERT INTO member_relationship(member_relationship_id,from_id,to_id,relationship_type,activated) VALUES
+(10100,'member_1','member_3','BLOCK',1),
+(10101,'member_1','member_4','FOLLOW',1),
+(10102,'member_1','member_5','FOLLOW',1),
+(10103,'member_1','member_6','FOLLOW',1),
+(10104,'member_99','member_1','FOLLOW',1);
