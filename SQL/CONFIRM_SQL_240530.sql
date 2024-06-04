@@ -781,6 +781,7 @@ CREATE TABLE chat_entrance (
     chatroom_entered_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     kicked BOOLEAN NOT NULL DEFAULT FALSE,
     activated BOOLEAN NOT NULL DEFAULT TRUE,
+    chatroom_dajung_temp_min FLOAT,
     FOREIGN KEY (chatroom_id) REFERENCES chatroom(chatroom_id),
     FOREIGN KEY (chatroom_member_id) REFERENCES members(member_id)
 );
