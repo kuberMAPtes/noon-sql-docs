@@ -765,6 +765,7 @@ CREATE TABLE chatroom (
     building_id INT NOT NULL,
     chatroom_name VARCHAR(50) NOT NULL,
     chatroom_type ENUM('PRIVATE_CHATTING','GROUP_CHATTING') NOT NULL,
+    chatroom_dajung_temp_min FLOAT,
     activated BOOLEAN NOT NULL DEFAULT TRUE,
     FOREIGN KEY (chatroom_creator_id) REFERENCES members(member_id),
     FOREIGN KEY (building_id) REFERENCES building(building_id) -- Assuming building table exists
