@@ -213,7 +213,7 @@ CREATE TABLE notification (
     notification_id INT PRIMARY KEY AUTO_INCREMENT,
     receiver_id VARCHAR(20) NOT NULL,
     notification_text VARCHAR(300) NOT NULL,
-    notification_type ENUM('COMMENT','LIKE') NOT NULL,
+    notification_type ENUM('COMMENT','LIKE','REPORT') NOT NULL,
     FOREIGN KEY (receiver_id) REFERENCES members(member_id)
 );
 ALTER TABLE notification AUTO_INCREMENT = 10000;
