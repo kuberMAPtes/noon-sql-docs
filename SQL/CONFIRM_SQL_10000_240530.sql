@@ -627,6 +627,7 @@ BEGIN
             building_id,
             chatroom_name,
             chatroom_type,
+            chatroom_dajung_temp_min,
             activated
         ) VALUES (
             CONCAT('member_', i), -- chatroom_creator_id (member_1 ~ member_100)
