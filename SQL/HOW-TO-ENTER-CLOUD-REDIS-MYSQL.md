@@ -7,9 +7,9 @@
 sudo pkill ssh
 sudo pkill autossh
 ssh -f -N -L 6379:10.0.2.202:6379 root@175.45.201.90
-autossh -M 0 -f -N -L 6379:localhost:6379 root@175.45.201.90
+autossh -M 0 -f -N -L 6379:10.0.2.202:6379 root@175.45.201.90
 ssh -f -N -L 3307:10.0.2.202:3306 root@175.45.201.90
-autossh -M 0 -f -N -L 3307:localhost:3306 root@175.45.201.90
+autossh -M 0 -f -N -L 3307:10.0.2.202:3306 root@175.45.201.90
 #현재 포트포워딩 규칙 확인
 ps aux | grep 'ssh'
 #
