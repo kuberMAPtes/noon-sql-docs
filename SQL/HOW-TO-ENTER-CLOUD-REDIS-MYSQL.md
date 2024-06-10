@@ -67,7 +67,7 @@ Host remote
     LocalForward 6379 localhost:6379
 ```
 
-
+# 이건 자동로그인하는 방법입니다
 만약에 우분투VM을 안쓰고 cmd에서 한다면..? 비추천
 ---
 ### 윈도우에서 하기..
