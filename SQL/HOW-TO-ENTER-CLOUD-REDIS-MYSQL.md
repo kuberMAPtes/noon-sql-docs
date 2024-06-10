@@ -76,7 +76,7 @@ Host remote
 먼저 Windows 환경에서 Windows 파일 시스템을 Bash 쉘로 조작할 수 있는 Git Bash를 설치한다.
 
 ```bash
-ssh-keygen -t rsa -b 4096 -C "osumaniaddict527@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "osumaniaddict527@gmail.com(개인이메일주소넣어주세요)"
 
 하고 엔터 3번하기(비밀번호 관련내용)
 
