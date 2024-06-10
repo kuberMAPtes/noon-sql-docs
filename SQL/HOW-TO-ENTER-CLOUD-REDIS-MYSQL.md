@@ -83,7 +83,7 @@ ssh-keygen -t rsa -b 4096 -C "osumaniaddict527@gmail.com(개인이메일주소�
 ssh-copy-id root@175.45.201.90
 #그리고 비밀번호입력 구글드라이브>현준apikey
 
-cat c://user/osuma/.ssh/id_rsa.pub
+cat /c/Users/osuma/.ssh/id_rsa.pub
 #user/osuma는 내 개인디렉토리라서 no such directory가 뜰 것이다. user/당신의개인디렉토리명 gitbash상단바를 봐보자 find ~ -name "id_rsa.pub"
 vim ~/.ssh/config
 
