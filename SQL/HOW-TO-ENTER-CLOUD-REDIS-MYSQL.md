@@ -78,7 +78,7 @@ Host remote
 ```bash
 ssh-keygen -t rsa -b 4096 -C "osumaniaddict527@gmail.com(개인이메일주소넣어주세요)"
 
-하고 엔터 3번하기(비밀번호 관련내용)
+#하고 엔터 3번하기(비밀번호 관련내용) 한줄 한줄 씩 복사해서 실행해주세요
 
 ssh-copy-id root@175.45.201.90
 
