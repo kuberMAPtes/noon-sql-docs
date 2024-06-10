@@ -90,13 +90,13 @@ vim ~/.ssh/config
 
 이렇게 작성하면 된다. 아래에 내가 작성한 예시데이터를 보는게 이해가 빠르다. 
 Host bastion
-    HostName bastion_host
+    HostName {당신의bastion_host}
     User user
     IdentityFile ~/.ssh/id_rsa
     ForwardAgent yes
 
 Host remote
-    HostName remote_host
+    HostName {당신의remote_host}
     User remote_user
     IdentityFile ~/.ssh/id_rsa
     ProxyJump bastion
