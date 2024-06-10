@@ -818,11 +818,9 @@ SELECT * FROM chat_apply;
 SELECT * FROM chatroom;
 SELECT * FROM chat_entrance;
 
-UPDATE members SET nickname="특별한닝겐",pwd="rniei123",phone_number="010-4543-1211",unlock_time="2024-07-20 01:01:01",profile_intro="반가워나는멤버1",dajung_score=89,member_profile_public_range="MUTUAL_ONLY" WHERE member_id="member_1";
-UPDATE members SET nickname="특별한닝겐2",pwd="rniei123",phone_number="010-4543-1541",unlock_time="0101-01-01 01:01:01",profile_intro="반가워나는멤버2",dajung_score=89,member_profile_public_range="FOLLOWER_ONLY" WHERE member_id="member_2";
-UPDATE members SET nickname="특별한닝겐",pwd="kubermaptes527",phone_number="010-4543-1211",unlock_time="2024-07-20 01:01:01",profile_intro="반가워나는멤버1",dajung_score=89,member_profile_public_range="MUTUAL_ONLY" WHERE member_id="member_1";
-UPDATE members SET nickname="특별한닝겐2",pwd="kubermaptes527",phone_number="010-4543-1541",unlock_time="0101-01-01 01:01:01",profile_intro="반가워나는멤버2",dajung_score=85,member_profile_public_range="FOLLOWER_ONLY" WHERE member_id="member_2";
-UPDATE members SET member_role="ADMIN",nickname="특별한닝겐100",pwd="kubermaptes527",phone_number="010-4543-1545",unlock_time="0101-01-01 01:01:01",profile_intro="반가워나는관리자100",dajung_score=5,member_profile_public_range="PRIVATE" WHERE member_id="member_100";
+UPDATE members SET nickname="특별한닝겐",pwd="noon0716",phone_number="010-4543-1211",unlock_time="2024-07-20 01:01:01",profile_intro="반가워나는멤버1",dajung_score=89,member_profile_public_range="MUTUAL_ONLY" WHERE member_id="member_1";
+UPDATE members SET nickname="특별한닝겐2",pwd="noon0716",phone_number="010-4543-1541",unlock_time="0101-01-01 01:01:01",profile_intro="반가워나는멤버2",dajung_score=85,member_profile_public_range="FOLLOWER_ONLY" WHERE member_id="member_2";
+UPDATE members SET member_role="ADMIN",nickname="특별한닝겐100",pwd="noon0716",phone_number="010-4543-1545",unlock_time="0101-01-01 01:01:01",profile_intro="반가워나는관리자100",dajung_score=5,member_profile_public_range="PRIVATE" WHERE member_id="member_100";
 ###자기 자신이 스스로 구독한 사람이 없어서 한 명 추가.
 UPDATE zzim SET building_id=10000,subscription_provider_id='member_1',zzim_type='SUBSCRIPTION' WHERE zzim_id=10000;
 ##95이상 activated가 false 되어있는데 꼭 그런 것은 아님!(그럴 때도 있지만)
@@ -835,6 +833,7 @@ INSERT INTO member_relationship(member_relationship_id,from_id,to_id,relationshi
 (10102,'member_1','member_5','FOLLOW',1),
 (10103,'member_1','member_6','FOLLOW',1),
 (10104,'member_99','member_1','FOLLOW',1);
-=======
+SELECT * FROM members;
+SELECT * FROM member_relationship;
 INSERT INTO member_relationship(from_id,to_id,relationship_type,activated) VALUES
 ('member_1','member_15','BLOCK',1)
