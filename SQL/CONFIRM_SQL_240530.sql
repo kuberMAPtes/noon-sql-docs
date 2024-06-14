@@ -809,19 +809,20 @@ UPDATE members SET member_role = 'MEMBER', nickname = '예시멤버10', pwd = 'n
 UPDATE members SET member_role="MEMBER", nickname="잠금된닝겐10", pwd="noon0716",phone_number="010-1234-5842",unlock_time="2024-07-30 01:01:01",profile_intro="반가워나는잠금된멤버10", dajung_score=10,member_profile_public_range="PUBLIC" WHERE member_id="member_10";
 UPDATE members SET nickname="특별한닝겐2",pwd="noon0716",phone_number="010-4543-1541",unlock_time="0101-01-01 01:01:01",profile_intro="반가워나는멤버2",dajung_score=85,member_profile_public_range="FOLLOWER_ONLY" WHERE member_id="member_2";
 ### 빌딩
-UPDATE building SET building_name = '예시빌딩1', profile_activated = TRUE, road_addr = '서울시 예시구 예시동 1-1', longitude = 126.9780, latitude = 37.5665, feed_ai_summary = '예시 요약 1' WHERE building_id = 10001;
+UPDATE building SET building_name = '예시빌딩0', profile_activated = TRUE, road_addr = '서울시 예시구 예시동 1-0', longitude = 126.9780, latitude = 37.5665, feed_ai_summary = '예시 요약 0' WHERE building_id = 10000;
+UPDATE building SET building_name = '예시빌딩1', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 1-1', longitude = 126.9780, latitude = 37.5665, feed_ai_summary = '예시 요약 1' WHERE building_id = 10001;
 UPDATE building SET building_name = '예시빌딩2', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 2-2', longitude = 127.0280, latitude = 37.5700, feed_ai_summary = '예시 요약 2' WHERE building_id = 10002;
-UPDATE building SET building_name = '예시빌딩3', profile_activated = TRUE, road_addr = '서울시 예시구 예시동 3-3', longitude = 126.9880, latitude = 37.5710, feed_ai_summary = '예시 요약 3' WHERE building_id = 10003;
+UPDATE building SET building_name = '예시빌딩3', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 3-3', longitude = 126.9880, latitude = 37.5710, feed_ai_summary = '예시 요약 3' WHERE building_id = 10003;
 UPDATE building SET building_name = '예시빌딩4', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 4-4', longitude = 127.0380, latitude = 37.5720, feed_ai_summary = '예시 요약 4' WHERE building_id = 10004;
-UPDATE building SET building_name = '예시빌딩5', profile_activated = TRUE, road_addr = '서울시 예시구 예시동 5-5', longitude = 126.9980, latitude = 37.5730, feed_ai_summary = '예시 요약 5' WHERE building_id = 10005;
+UPDATE building SET building_name = '예시빌딩5', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 5-5', longitude = 126.9980, latitude = 37.5730, feed_ai_summary = '예시 요약 5' WHERE building_id = 10005;
 UPDATE building SET building_name = '예시빌딩6', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 6-6', longitude = 127.0480, latitude = 37.5740, feed_ai_summary = '예시 요약 6' WHERE building_id = 10006;
-UPDATE building SET building_name = '예시빌딩7', profile_activated = TRUE, road_addr = '서울시 예시구 예시동 7-7', longitude = 127.0080, latitude = 37.5750, feed_ai_summary = '예시 요약 7' WHERE building_id = 10007;
+UPDATE building SET building_name = '예시빌딩7', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 7-7', longitude = 127.0080, latitude = 37.5750, feed_ai_summary = '예시 요약 7' WHERE building_id = 10007;
 UPDATE building SET building_name = '예시빌딩8', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 8-8', longitude = 127.0580, latitude = 37.5760, feed_ai_summary = '예시 요약 8' WHERE building_id = 10008;
-UPDATE building SET building_name = '예시빌딩9', profile_activated = TRUE, road_addr = '서울시 예시구 예시동 9-9', longitude = 127.0180, latitude = 37.5770, feed_ai_summary = '예시 요약 9' WHERE building_id = 10009;
+UPDATE building SET building_name = '예시빌딩9', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 9-9', longitude = 127.0180, latitude = 37.5770, feed_ai_summary = '예시 요약 9' WHERE building_id = 10009;
 UPDATE building SET building_name = '예시빌딩10', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 10-10', longitude = 127.0680, latitude = 37.5780, feed_ai_summary = '예시 요약 10' WHERE building_id = 10010;
-UPDATE building SET building_name = '예시빌딩11', profile_activated = TRUE, road_addr = '서울시 예시구 예시동 11-11', longitude = 127.0280, latitude = 37.5790, feed_ai_summary = '예시 요약 11' WHERE building_id = 10011;
+UPDATE building SET building_name = '예시빌딩11', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 11-11', longitude = 127.0280, latitude = 37.5790, feed_ai_summary = '예시 요약 11' WHERE building_id = 10011;
 UPDATE building SET building_name = '예시빌딩12', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 12-12', longitude = 127.0780, latitude = 37.5800, feed_ai_summary = '예시 요약 12' WHERE building_id = 10012;
-UPDATE building SET building_name = '예시빌딩13', profile_activated = TRUE, road_addr = '서울시 예시구 예시동 13-13', longitude = 127.0380, latitude = 37.5810, feed_ai_summary = '예시 요약 13' WHERE building_id = 10013;
+UPDATE building SET building_name = '예시빌딩13', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 13-13', longitude = 127.0380, latitude = 37.5810, feed_ai_summary = '예시 요약 13' WHERE building_id = 10013;
 ###찜
 
 
@@ -859,7 +860,7 @@ INSERT INTO feed (writer_id, building_id, main_activated, public_range, title, f
 ('member_100', 10000, FALSE, 'PUBLIC', '예시 제목 100-8', '여기는 예시 피드 100-8의 내용입니다.', 100, 'GENERAL'),
 ('member_100', 10000, FALSE, 'PUBLIC', '예시 제목 100-9', '여기는 예시 피드 100-9의 내용입니다.', 100, 'GENERAL'),
 ('member_100', 10000, FALSE, 'PUBLIC', '예시 제목 100-10', '여기는 예시 피드 100-10의 내용입니다.', 100, 'GENERAL');
-#찜 생략
+#찜 아래에 있음
 ### 피드코멘트 
 INSERT INTO feed_comment (feed_id, commenter_id, comment_text, written_time, activated) VALUES
 (10000, 'member_2', '여기는 예시 댓글 1의 내용입니다.', NOW(), TRUE),
@@ -953,8 +954,6 @@ INSERT INTO chatroom (chatroom_creator_id, building_id, chatroom_name, chatroom_
 ('member_1', 10000, '프라이빗 채팅방 9', 'PRIVATE_CHATTING', 0, TRUE),
 ('member_1', 10000, '프라이빗 채팅방 10', 'PRIVATE_CHATTING', 0, FALSE);
 
-
-
 ### 챗 인트런스
 INSERT INTO chat_entrance (chatroom_id, chatroom_member_id, chatroom_member_type, chatroom_entered_time, kicked, activated) VALUES
 (10100, 'member_1', 'OWNER', NOW(), FALSE, TRUE),
@@ -1043,6 +1042,91 @@ INSERT INTO member_relationship(member_relationship_id,from_id,to_id,relationshi
 (10104,'member_99','member_1','FOLLOW',1);
 INSERT INTO member_relationship(from_id,to_id,relationship_type,activated) VALUES
 ('member_1','member_15','BLOCK',1);
+### 1. 건물 합치기 기능을 위해 필요한 쿼리(임시)
+INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated)
+VALUES ('member_1', NULL, 10003, 'member_1', 'SUBSCRIPTION', 1);
+
+##설명:** 
+#건물 합치기를 한 찜 레코드의 경우
+#member_id와 subscription_provider_id가 다를 것이고,
+#그 레코드가 하나 있다면 subscription_provider_id = member_id인 레코드가 하나 더 있어야 한다.
+#예를 들어 user09가 user10의 구독을 합치기 했다면 zzim에는 
+
+#member_id | subscription_provider_id | activated**
+#user09           user10                               1
+#이런 레코드가 있을 것이고, 그 전에
+
+#**member_id | subscription_provider_id | activated**
+#user10           user10                                1
+#이런 레코드가 꼭 있어야 한다. (user10이 구독한 기록이 있어야 타 유저가 합치기 가능하므로)
+### 관리자 계정 추가
+  INSERT INTO members (
+            member_id, 
+            member_role, 
+            nickname, 
+            pwd, 
+            phone_number, 
+            unlock_time, 
+            profile_photo_url, 
+            profile_intro, 
+            dajung_score, 
+            signed_off, 
+            building_subscription_public_range, 
+            all_feed_public_range, 
+            member_profile_public_range, 
+            receiving_all_notification_allowed
+        ) VALUES (
+            'admin_1' ,
+            'ADMIN',
+            'adminNickname_1',
+            'password',
+            '010-1111-1111',
+            '0001-01-01 01:01:01',
+            NULL,
+            NULL,
+            0,
+            FALSE,
+            'PUBLIC',
+            'PUBLIC',
+            'PUBLIC',
+            TRUE
+        );
+### 피드 요약을 위한 추가 피드 데이터
+INSERT into feed (writer_id, building_id, main_activated, public_range, title, feed_text, view_cnt, written_time, feed_category, modified, activated) VALUES
+('member_45', 10099, 0, 'PUBLIC', 'Title_100', 'Feed text for feed 100', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
+('member_78', 10099, 0, 'PUBLIC', 'Title_101', 'Feed text for feed 101', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
+('member_22', 10099, 0, 'PUBLIC', 'Title_102', 'Feed text for feed 102', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
+('member_13', 10099, 0, 'PUBLIC', 'Title_103', 'Feed text for feed 103', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
+('member_67', 10099, 0, 'PUBLIC', 'Title_104', 'Feed text for feed 104', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
+('member_39', 10099, 0, 'PUBLIC', 'Title_105', 'Feed text for feed 105', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
+('member_56', 10099, 0, 'PUBLIC', 'Title_106', 'Feed text for feed 106', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
+('member_81', 10099, 0, 'PUBLIC', 'Title_107', 'Feed text for feed 107', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
+('member_23', 10099, 0, 'PUBLIC', 'Title_108', 'Feed text for feed 108', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1);
+### 프로필이 활성화된 건물 추가
+UPDATE building SET profile_activated = 1 WHERE building_id = 10099;
+### 피드 첨부파일 수정(Object Storage로 url을 실제로 대입), 일단 5개만 테스트
+DELETE FROM feed_attachment; 
+INSERT INTO feed_attachment (attachment_id, feed_id, file_url, file_type, blurred_file_url, activated) VALUES (10000, 10000, 'https://kr.object.ncloudstorage.com/noon-images/Image1.jpg', 'PHOTO', NULL, 1), (10001, 10001, 'https://kr.object.ncloudstorage.com/noon-images/Image2.jpg', 'PHOTO', NULL, 1), (10002, 10002, 'https://kr.object.ncloudstorage.com/noon-images/Image3.jpg', 'PHOTO', NULL, 1), (10003, 10003, 'https://kr.object.ncloudstorage.com/noon-images/Image4.jpg', 'PHOTO', NULL, 1), (10004, 10004, 'https://kr.object.ncloudstorage.com/noon-images/Image5.jpg', 'PHOTO', NULL, 1);
+SELECT * FROM feed_attachment;
+### 건물 구독 목록 데이터 추가 
+INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
+VALUES
+("member_99", null, 10089, "member_99", "SUBSCRIPTION", 1),
+("member_1",null,10000,null,"SUBSCRIPTION",1),
+("member_2",null,10000,null,"SUBSCRIPTION",1),
+("member_3",null,10000,null,"SUBSCRIPTION",1),
+("member_4",null,10000,null,"SUBSCRIPTION",1),
+("member_5",null,10000,null,"SUBSCRIPTION",1),
+("member_6",null,10000,null,"SUBSCRIPTION",1);
+INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
+VALUES ("member_100", null, 10089, "member_99", "SUBSCRIPTION", 1);
+### 건물별 피드 데이터 추가
+INSERT INTO feed (writer_id, building_id, main_activated, public_range, title, feed_text, view_cnt, written_time, feed_category, modified, activated) VALUES
+('member_1', 10089, 1, 'PUBLIC', 'Title_10100', 'Feed text for feed 10100', 100, CURRENT_TIMESTAMP, 'GENERAL', 0, 1),
+('member_2', 10089, 0, 'PUBLIC', 'Title_10101', 'Feed text for feed 10101', 100, CURRENT_TIMESTAMP, 'GENERAL', 0, 1),
+('member_3', 10089, 0, 'PUBLIC', 'Title_10102', 'Feed text for feed 10102', 100, CURRENT_TIMESTAMP, 'GENERAL', 0, 1),
+('member_4', 10089, 0, 'PUBLIC', 'Title_10103', 'Feed text for feed 10103', 100, CURRENT_TIMESTAMP, 'GENERAL', 0, 1),
+('member_5', 10089, 0, 'PUBLIC', 'Title_10104', 'Feed text for feed 10104', 100, CURRENT_TIMESTAMP, 'GENERAL', 0, 1);
 SELECT * FROM members;
 SELECT * FROM building;
 SELECT * FROM zzim;
