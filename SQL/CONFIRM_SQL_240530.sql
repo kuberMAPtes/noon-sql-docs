@@ -1127,6 +1127,12 @@ INSERT INTO feed (writer_id, building_id, main_activated, public_range, title, f
 ('member_3', 10089, 0, 'PUBLIC', 'Title_10102', 'Feed text for feed 10102', 100, CURRENT_TIMESTAMP, 'GENERAL', 0, 1),
 ('member_4', 10089, 0, 'PUBLIC', 'Title_10103', 'Feed text for feed 10103', 100, CURRENT_TIMESTAMP, 'GENERAL', 0, 1),
 ('member_5', 10089, 0, 'PUBLIC', 'Title_10104', 'Feed text for feed 10104', 100, CURRENT_TIMESTAMP, 'GENERAL', 0, 1);
+
+### 프로필이 활성화 되어있는 건물 추가
+UPDATE building
+SET profile_activated = 1
+WHERE building_id BETWEEN 10050 AND 10099;
+
 SELECT * FROM members;
 SELECT * FROM building;
 SELECT * FROM zzim;
