@@ -534,12 +534,14 @@ BEGIN
             applicant_id,
             respondent_id,
             apply_message,
-            reject_message
+            reject_message,
+	    activated
         ) VALUES (
 			CONCAT('member_',i),
             CONCAT('member_',IF(i=100,1,i+1)),
             CONCAT('Apply message ', i), -- apply_message
-            CONCAT('Reject message ', i) -- reject_message
+            CONCAT('Reject message ', i), -- reject_message
+	    TRUE
         );
         SET i = i + 1;
     END WHILE;
@@ -756,6 +758,7 @@ CREATE TABLE chat_apply (
     respondent_id VARCHAR(20) NOT NULL,
     apply_message VARCHAR(400),
     reject_message VARCHAR(400),
+    activated BOOLEAN NOT NULL DEFAULT TRUE,
     FOREIGN KEY (applicant_id) REFERENCES members(member_id),
     FOREIGN KEY (respondent_id) REFERENCES members(member_id)
 );
@@ -915,17 +918,17 @@ INSERT INTO report (reporter_id, reportee_id, report_status, report_text, report
 ('member_1', 'member_12', 'PEND', '회원님이 부적절한 내용을 작성했습니다. 그래서 신고했습니다.', NOW(), NULL);
 ### 멤버관계 생략
 ### 챗어플라이
-INSERT INTO chat_apply (applicant_id, respondent_id, apply_message, reject_message) VALUES
-('member_2', 'member_1', '안녕하세요, 채팅 신청드립니다.', NULL),
-('member_3', 'member_1', '안녕하세요, 채팅하고 싶습니다.', '죄송합니다, 채팅이 어렵습니다.'),
-('member_4', 'member_1', '채팅 신청합니다.', NULL),
-('member_5', 'member_1', '채팅 가능할까요?', '채팅이 어렵습니다. 죄송합니다.'),
-('member_6', 'member_1', '채팅 요청 드립니다.', NULL),
-('member_7', 'member_1', '채팅하고 싶습니다.', '현재 채팅이 어렵습니다.'),
-('member_8', 'member_1', '채팅 부탁드립니다.', NULL),
-('member_9', 'member_1', '채팅 가능하신가요?', '죄송합니다, 지금은 채팅이 어렵습니다.'),
-('member_10', 'member_1', '채팅 신청합니다.', NULL),
-('member_11', 'member_1', '채팅 원합니다.', '현재 채팅이 불가능합니다.');
+INSERT INTO chat_apply (applicant_id, respondent_id, apply_message, reject_message,activated) VALUES
+('member_2', 'member_1', '안녕하세요, 채팅 신청드립니다.', NULL,TRUE),
+('member_3', 'member_1', '안녕하세요, 채팅하고 싶습니다.', '죄송합니다, 채팅이 어렵습니다.',FALSE),
+('member_4', 'member_1', '채팅 신청합니다.', NULL,TRUE),
+('member_5', 'member_1', '채팅 가능할까요?', '채팅이 어렵습니다. 죄송합니다.',TRUE),
+('member_6', 'member_1', '채팅 요청 드립니다.', NULL,TRUE),
+('member_7', 'member_1', '채팅하고 싶습니다.', '현재 채팅이 어렵습니다.',FALSE),
+('member_8', 'member_1', '채팅 부탁드립니다.', NULL,TRUE),
+('member_9', 'member_1', '채팅 가능하신가요?', '죄송합니다, 지금은 채팅이 어렵습니다.',FALSE),
+('member_10', 'member_1', '채팅 신청합니다.', NULL,TRUE),
+('member_11', 'member_1', '채팅 원합니다.', '현재 채팅이 불가능합니다.',FALSE);
 
 ### 챗룸
 -- 첫 10개 채팅방 (GROUP_CHATTING 타입)
