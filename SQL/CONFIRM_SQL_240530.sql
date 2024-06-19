@@ -189,7 +189,7 @@ BEGIN
             CONCAT('member_', i), -- member_id
             'MEMBER', -- member_role
             CONCAT('nickname_', i), -- nickname
-            'password', -- pwd
+            'noon0716', -- pwd
             CONCAT('010-0000-00', LPAD(MOD(i, 100), 2, '0')), -- phone_number
             '0001-01-01 01:01:01', -- unlock_time
             NULL, -- profile_photo_url
