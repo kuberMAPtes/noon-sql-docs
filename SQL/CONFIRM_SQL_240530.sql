@@ -1094,17 +1094,7 @@ VALUES ('member_1', NULL, 10003, 'member_1', 'SUBSCRIPTION', 1);
             'PUBLIC',
             TRUE
         );
-### 피드 요약을 위한 추가 피드 데이터
-INSERT into feed (writer_id, building_id, main_activated, public_range, title, feed_text, view_cnt, written_time, feed_category, modified, activated) VALUES
-('member_45', 10099, 0, 'PUBLIC', 'Title_100', 'Feed text for feed 100', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
-('member_78', 10099, 0, 'PUBLIC', 'Title_101', 'Feed text for feed 101', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
-('member_22', 10099, 0, 'PUBLIC', 'Title_102', 'Feed text for feed 102', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
-('member_13', 10099, 0, 'PUBLIC', 'Title_103', 'Feed text for feed 103', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
-('member_67', 10099, 0, 'PUBLIC', 'Title_104', 'Feed text for feed 104', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
-('member_39', 10099, 0, 'PUBLIC', 'Title_105', 'Feed text for feed 105', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
-('member_56', 10099, 0, 'PUBLIC', 'Title_106', 'Feed text for feed 106', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
-('member_81', 10099, 0, 'PUBLIC', 'Title_107', 'Feed text for feed 107', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
-('member_23', 10099, 0, 'PUBLIC', 'Title_108', 'Feed text for feed 108', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1);
+
 ### 프로필이 활성화된 건물 추가
 UPDATE building SET profile_activated = 1 WHERE building_id = 10099;
 ### 피드 첨부파일 수정(Object Storage로 url을 실제로 대입), 일단 5개만 테스트
