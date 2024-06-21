@@ -629,9 +629,9 @@ CREATE INDEX idx_building_longitude ON building(longitude);
 CREATE INDEX idx_building_latitude ON building(latitude);
 
 CREATE TABLE members (
-	member_id VARCHAR(20) PRIMARY KEY,
+	member_id VARCHAR(50) PRIMARY KEY,
     member_role ENUM('MEMBER','ADMIN') NOT NULL DEFAULT 'MEMBER',
-    nickname VARCHAR(30) UNIQUE NOT NULL,
+    nickname VARCHAR(50) UNIQUE NOT NULL,
     pwd VARCHAR(100) NOT NULL,
 	phone_number VARCHAR(20) UNIQUE NOT NULL,
     unlock_time DATETIME NULL DEFAULT '0001-01-01 01:01:01',
