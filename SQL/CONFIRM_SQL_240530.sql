@@ -1097,10 +1097,14 @@ VALUES ('member_1', NULL, 10003, 'member_1', 'SUBSCRIPTION', 1);
 
 ### 프로필이 활성화된 건물 추가
 UPDATE building SET profile_activated = 1 WHERE building_id = 10099;
-### 피드 첨부파일 수정(Object Storage로 url을 실제로 대입), 일단 5개만 테스트
+
+
+### 피드 첨부파일 수정(Object Storage로 url을 실제로 대입), 일단 10개만 테스트
 DELETE FROM feed_attachment; 
-INSERT INTO feed_attachment (attachment_id, feed_id, file_url, file_type, blurred_file_url, activated) VALUES (10000, 10000, 'https://kr.object.ncloudstorage.com/noon-images/Image1.jpg', 'PHOTO', NULL, 1), (10001, 10001, 'https://kr.object.ncloudstorage.com/noon-images/Image2.jpg', 'PHOTO', NULL, 1), (10002, 10002, 'https://kr.object.ncloudstorage.com/noon-images/Image3.jpg', 'PHOTO', NULL, 1), (10003, 10003, 'https://kr.object.ncloudstorage.com/noon-images/Image4.jpg', 'PHOTO', NULL, 1), (10004, 10004, 'https://kr.object.ncloudstorage.com/noon-images/Image5.jpg', 'PHOTO', NULL, 1);
+INSERT INTO feed_attachment (attachment_id, feed_id, file_url, file_type, blurred_file_url, activated) VALUES (10000, 10000, 'https://kr.object.ncloudstorage.com/noon-images/Image1.jpg', 'PHOTO', NULL, 1), (10001, 10001, 'https://kr.object.ncloudstorage.com/noon-images/Image2.jpg', 'PHOTO', NULL, 1), (10002, 10002, 'https://kr.object.ncloudstorage.com/noon-images/Image3.jpg', 'PHOTO', NULL, 1), (10003, 10003, 'https://kr.object.ncloudstorage.com/noon-images/Image4.jpg', 'PHOTO', NULL, 1), (10004, 10004, 'https://kr.object.ncloudstorage.com/noon-images/Image5.jpg', 'PHOTO', NULL, 1),(10005, 10005, 'https://kr.object.ncloudstorage.com/noon-images/Image6.jpg', 'PHOTO', NULL, 1),(10006, 10006, 'https://kr.object.ncloudstorage.com/noon-images/Image7.jpg', 'PHOTO', NULL, 1),(10007, 10007, 'https://kr.object.ncloudstorage.com/noon-images/Image8.jpg', 'PHOTO', NULL, 1),(10008, 10008, 'https://kr.object.ncloudstorage.com/noon-images/Image9.jpg', 'PHOTO', NULL, 1),(10009, 10009, 'https://kr.object.ncloudstorage.com/noon-images/Image19.jpg', 'PHOTO', NULL, 1);
 SELECT * FROM feed_attachment;
+
+
 ### 건물 구독 목록 데이터 추가 
 INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
 VALUES
