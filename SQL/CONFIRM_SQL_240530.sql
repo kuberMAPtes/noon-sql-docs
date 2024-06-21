@@ -671,7 +671,7 @@ CREATE INDEX idx_feed_feed_text ON feed(feed_text(100));
 
 CREATE TABLE zzim (
 zzim_id INT PRIMARY KEY AUTO_INCREMENT,
-member_id VARCHAR(20),
+member_id VARCHAR(50),
 feed_id INT NULL,
 building_id INT NULL,
 subscription_provider_id VARCHAR(20) NULL,
@@ -782,7 +782,7 @@ CREATE INDEX idx_chatroom_chatroom_name ON chatroom(chatroom_name);
 CREATE TABLE chat_entrance (
     chat_entrance_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     chatroom_id INT NOT NULL,
-    chatroom_member_id VARCHAR(20) NOT NULL,
+    chatroom_member_id VARCHAR(50) NOT NULL,
     chatroom_member_type ENUM('MEMBER','OWNER') NOT NULL DEFAULT 'MEMBER',
     chatroom_entered_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     kicked BOOLEAN NOT NULL DEFAULT FALSE,
