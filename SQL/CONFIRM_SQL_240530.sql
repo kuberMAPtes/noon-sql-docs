@@ -1131,6 +1131,21 @@ INSERT INTO feed (writer_id, building_id, main_activated, public_range, title, f
 ('member_4', 10089, 0, 'PUBLIC', 'Title_10103', 'Feed text for feed 10103', 100, CURRENT_TIMESTAMP, 'GENERAL', 0, 1),
 ('member_5', 10089, 0, 'PUBLIC', 'Title_10104', 'Feed text for feed 10104', 100, CURRENT_TIMESTAMP, 'GENERAL', 0, 1);
 
+
+
+### 피드 요약을 위한 피드 데이터 추가
+INSERT into feed ( writer_id, building_id, main_activated, public_range, title, feed_text, view_cnt, written_time, feed_category, modified, activated) VALUES
+('member_78', 10089, 0, 'PUBLIC', 'Title_101', '이 건물 1층 보배반점이 맛있어요 다들 가봐요', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
+('member_22', 10089, 0, 'PUBLIC', 'Title_102', '크림짬뽕이 짱이에요 그리고 커피도 공짜로 줍니다ㅎ', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
+('member_13', 10089, 0, 'PUBLIC', 'Title_103', '근데 짬뽕14000원은 너무 비싸지 않나?', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
+('member_67', 10089, 0, 'PUBLIC', 'Title_104', '김철수 왔다감', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
+('member_39', 10089, 0, 'PUBLIC', 'Title_105', '근처에 커피 잘 내리는 곳 추천좀', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
+('member_56', 10089, 0, 'PUBLIC', 'Title_106', '이거 뭐야', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
+('member_81', 10089, 0, 'PUBLIC', 'Title_107', '헤헿헤헿', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
+('member_23', 10089, 0, 'PUBLIC', 'Title_108', '다들 뭐해요', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
+('member_45', 10089, 0, 'PUBLIC', 'Title_100', '보배반점 맛있어요 특히 크림짬뽕이 맛있음', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1);
+
+
 ### 프로필이 활성화 되어있는 건물 추가
 UPDATE building
 SET profile_activated = 1
