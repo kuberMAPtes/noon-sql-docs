@@ -1049,19 +1049,7 @@ INSERT INTO member_relationship(from_id,to_id,relationship_type,activated) VALUE
 INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated)
 VALUES ('member_1', NULL, 10003, 'member_1', 'SUBSCRIPTION', 1);
 
-##설명:** 
-#건물 합치기를 한 찜 레코드의 경우
-#member_id와 subscription_provider_id가 다를 것이고,
-#그 레코드가 하나 있다면 subscription_provider_id = member_id인 레코드가 하나 더 있어야 한다.
-#예를 들어 user09가 user10의 구독을 합치기 했다면 zzim에는 
 
-#member_id | subscription_provider_id | activated**
-#user09           user10                               1
-#이런 레코드가 있을 것이고, 그 전에
-
-#**member_id | subscription_provider_id | activated**
-#user10           user10                                1
-#이런 레코드가 꼭 있어야 한다. (user10이 구독한 기록이 있어야 타 유저가 합치기 가능하므로)
 ### 관리자 계정 추가
   INSERT INTO members (
             member_id, 
@@ -1099,9 +1087,9 @@ VALUES ('member_1', NULL, 10003, 'member_1', 'SUBSCRIPTION', 1);
 UPDATE building SET profile_activated = 1 WHERE building_id = 10099;
 
 
-### 피드 첨부파일 수정(Object Storage로 url을 실제로 대입)
+### 피드 첨부파일 수정(Object Storage로 url을 실제로 대입), 일단 10개만 테스트
 DELETE FROM feed_attachment; 
-INSERT INTO feed_attachment (attachment_id, feed_id, file_url, file_type, blurred_file_url, activated) VALUES (10000, 10000, 'https://kr.object.ncloudstorage.com/noon-images/Image1.jpg', 'PHOTO', NULL, 1), (10001, 10001, 'https://kr.object.ncloudstorage.com/noon-images/Image2.jpg', 'PHOTO', NULL, 1), (10002, 10002, 'https://kr.object.ncloudstorage.com/noon-images/Image3.jpg', 'PHOTO', NULL, 1), (10003, 10003, 'https://kr.object.ncloudstorage.com/noon-images/Image4.jpg', 'PHOTO', NULL, 1), (10004, 10004, 'https://kr.object.ncloudstorage.com/noon-images/Image5.jpg', 'PHOTO', NULL, 1),(10005, 10005, 'https://kr.object.ncloudstorage.com/noon-images/Imgae6.jpg', 'PHOTO', NULL, 1),(10006, 10006, 'https://kr.object.ncloudstorage.com/noon-images/Image7.jpg', 'PHOTO', NULL, 1),(10007, 10007, 'https://kr.object.ncloudstorage.com/noon-images/Image8.jpg', 'PHOTO', NULL, 1),(10008, 10008, 'https://kr.object.ncloudstorage.com/noon-images/Image9.jpg', 'PHOTO', NULL, 1),(10009, 10009, 'https://kr.object.ncloudstorage.com/noon-images/Image10.jpg', 'PHOTO', NULL, 1),(10010, 10010, 'https://kr.object.ncloudstorage.com/noon-images/Image11.jpg', 'PHOTO', NULL, 1);
+INSERT INTO feed_attachment (attachment_id, feed_id, file_url, file_type, blurred_file_url, activated) VALUES (10000, 10000, 'https://kr.object.ncloudstorage.com/noon-images/Image12.jpg', 'PHOTO', NULL, 1), (10001, 10001, 'https://kr.object.ncloudstorage.com/noon-images/Image7.jpg', 'PHOTO', NULL, 1), (10002, 10002, 'https://kr.object.ncloudstorage.com/noon-images/Image3.jpg', 'PHOTO', NULL, 1), (10003, 10003, 'https://kr.object.ncloudstorage.com/noon-images/Image1.jpg', 'PHOTO', NULL, 1), (10004, 10004, 'https://kr.object.ncloudstorage.com/noon-images/Image5.jpg', 'PHOTO', NULL, 1),(10005, 10005, 'https://kr.object.ncloudstorage.com/noon-images/Imgae6.jpg', 'PHOTO', NULL, 1),(10006, 10006, 'https://kr.object.ncloudstorage.com/noon-images/Image2.jpg', 'PHOTO', NULL, 1),(10007, 10007, 'https://kr.object.ncloudstorage.com/noon-images/Image8.jpg', 'PHOTO', NULL, 1),(10008, 10008, 'https://kr.object.ncloudstorage.com/noon-images/Image9.jpg', 'PHOTO', NULL, 1),(10009, 10009, 'https://kr.object.ncloudstorage.com/noon-images/Image10.jpg', 'PHOTO', NULL, 1),(10010, 10010, 'https://kr.object.ncloudstorage.com/noon-images/Image11.jpg', 'PHOTO', NULL, 1),(10011, 10011, 'https://kr.object.ncloudstorage.com/noon-images/Image4.jpg', 'PHOTO', NULL, 1);
 SELECT * FROM feed_attachment;
 
 
