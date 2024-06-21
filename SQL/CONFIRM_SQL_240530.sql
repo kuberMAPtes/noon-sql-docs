@@ -1070,7 +1070,7 @@ VALUES ('member_1', NULL, 10003, 'member_1', 'SUBSCRIPTION', 1);
             'admin_1' ,
             'ADMIN',
             'adminNickname_1',
-            'noon0613',
+            'noon0716',
             '010-1111-1111',
             '0001-01-01 01:01:01',
             NULL,
