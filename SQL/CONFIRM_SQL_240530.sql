@@ -1073,7 +1073,7 @@ VALUES ('member_1', NULL, 10003, 'member_1', 'SUBSCRIPTION', 1);
             'noon0716',
             '010-1111-1111',
             '0001-01-01 01:01:01',
-            NULL,
+            'https://kr.object.ncloudstorage.com/noon-images/Image8.jpg',
             NULL,
             0,
             FALSE,
