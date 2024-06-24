@@ -807,25 +807,191 @@ CALL insert_sample_chat_applies();
 CALL insert_sample_chatrooms();
 CALL insert_sample_chat_entrances();
 ### 멤버
-UPDATE members SET nickname="일반닝겐",pwd="noon0716",phone_number="010-4543-1211",unlock_time="2024-07-20 01:01:01",profile_intro="반가워나는멤버1",dajung_score=89,member_profile_public_range="MUTUAL_ONLY" WHERE member_id="member_1";
+UPDATE members SET nickname="웃음꽃피네",pwd="noon0716",phone_number="010-4543-1211",unlock_time="2024-07-20 01:01:01",profile_intro="반가워나는멤버1",dajung_score=89,member_profile_public_range="MUTUAL_ONLY" WHERE member_id="member_1";
 UPDATE members SET member_role = 'MEMBER', nickname = '예시멤버10', pwd = 'noon0716', phone_number = '010-2345-6789', unlock_time = '2024-07-30 01:01:01', profile_photo_url = 'http://example.com/photo10.jpg', profile_intro = '여기 예시 멤버10입니다.', dajung_score = 47, signed_off = FALSE, building_subscription_public_range = 'PUBLIC', all_feed_public_range = 'FOLLOWER_ONLY', member_profile_public_range = 'PRIVATE', receiving_all_notification_allowed = FALSE WHERE member_id = 'member_10';
 UPDATE members SET member_role="MEMBER", nickname="잠금된닝겐10", pwd="noon0716",phone_number="010-1234-5842",unlock_time="2024-07-30 01:01:01",profile_intro="반가워나는잠금된멤버10", dajung_score=10,member_profile_public_range="PUBLIC" WHERE member_id="member_10";
 UPDATE members SET nickname="특별한닝겐2",pwd="noon0716",phone_number="010-4543-1541",unlock_time="0101-01-01 01:01:01",profile_intro="반가워나는멤버2",dajung_score=85,member_profile_public_range="FOLLOWER_ONLY" WHERE member_id="member_2";
+UPDATE members SET nickname="고독한사나이" WHERE member_id="member_2";
+UPDATE members SET nickname="행복한미소" WHERE member_id="member_3";
+UPDATE members SET nickname="눈물의왕자" WHERE member_id="member_4";
+UPDATE members SET nickname="진지한철학자" WHERE member_id="member_5";
+UPDATE members SET nickname="유쾌한모험가" WHERE member_id="member_6";
+UPDATE members SET nickname="평온한바람" WHERE member_id="member_7";
+UPDATE members SET nickname="슬픈기억" WHERE member_id="member_8";
+UPDATE members SET nickname="신나는하루" WHERE member_id="member_9";
+UPDATE members SET nickname="어두운밤" WHERE member_id="member_10";
+UPDATE members SET nickname="웃기는사람" WHERE member_id="member_11";
+UPDATE members SET nickname="조용한순간" WHERE member_id="member_12";
+UPDATE members SET nickname="즐거운추억" WHERE member_id="member_13";
+UPDATE members SET nickname="가슴아픈이야기" WHERE member_id="member_14";
+UPDATE members SET nickname="낙천적인사람" WHERE member_id="member_15";
+UPDATE members SET nickname="진지한사색" WHERE member_id="member_16";
+UPDATE members SET nickname="행복의빛" WHERE member_id="member_17";
+UPDATE members SET nickname="눈물의연못" WHERE member_id="member_18";
+UPDATE members SET nickname="기분좋은날" WHERE member_id="member_19";
+UPDATE members SET nickname="어두운그림자" WHERE member_id="member_20";
+UPDATE members SET nickname="개그맨" WHERE member_id="member_21";
+UPDATE members SET nickname="심오한이야기" WHERE member_id="member_22";
+UPDATE members SET nickname="환한미소" WHERE member_id="member_23";
+UPDATE members SET nickname="쓸쓸한밤" WHERE member_id="member_24";
+UPDATE members SET nickname="웃긴사연" WHERE member_id="member_25";
+UPDATE members SET nickname="심각한토론" WHERE member_id="member_26";
+UPDATE members SET nickname="희망의불빛" WHERE member_id="member_27";
+UPDATE members SET nickname="슬픈추억" WHERE member_id="member_28";
+UPDATE members SET nickname="활기찬아침" WHERE member_id="member_29";
+UPDATE members SET nickname="침울한날" WHERE member_id="member_30";
+UPDATE members SET nickname="재밌는이야기" WHERE member_id="member_31";
+UPDATE members SET nickname="고요한사색" WHERE member_id="member_32";
+UPDATE members SET nickname="기쁨의순간" WHERE member_id="member_33";
+UPDATE members SET nickname="눈물의기억" WHERE member_id="member_34";
+UPDATE members SET nickname="즐거운여행" WHERE member_id="member_35";
+UPDATE members SET nickname="깊은상념" WHERE member_id="member_36";
+UPDATE members SET nickname="웃음가득" WHERE member_id="member_37";
+UPDATE members SET nickname="비통한이별" WHERE member_id="member_38";
+UPDATE members SET nickname="기쁜하루" WHERE member_id="member_39";
+UPDATE members SET nickname="어두운밤하늘" WHERE member_id="member_40";
+UPDATE members SET nickname="코믹한사건" WHERE member_id="member_41";
+UPDATE members SET nickname="엄숙한의식" WHERE member_id="member_42";
+UPDATE members SET nickname="행복한시간" WHERE member_id="member_43";
+UPDATE members SET nickname="눈물의강" WHERE member_id="member_44";
+UPDATE members SET nickname="웃음의전사" WHERE member_id="member_45";
+UPDATE members SET nickname="깊은생각" WHERE member_id="member_46";
+UPDATE members SET nickname="즐거운시간" WHERE member_id="member_47";
+UPDATE members SET nickname="비통한기억" WHERE member_id="member_48";
+UPDATE members SET nickname="행복의순간" WHERE member_id="member_49";
+UPDATE members SET nickname="어두운기억" WHERE member_id="member_50";
+UPDATE members SET nickname="웃기는이야기" WHERE member_id="member_51";
+UPDATE members SET nickname="진지한시간" WHERE member_id="member_52";
+UPDATE members SET nickname="행복한추억" WHERE member_id="member_53";
+UPDATE members SET nickname="눈물의시간" WHERE member_id="member_54";
+UPDATE members SET nickname="코믹한모험" WHERE member_id="member_55";
+UPDATE members SET nickname="엄숙한순간" WHERE member_id="member_56";
+UPDATE members SET nickname="행복의날" WHERE member_id="member_57";
+UPDATE members SET nickname="슬픔의끝" WHERE member_id="member_58";
+UPDATE members SET nickname="재밌는추억" WHERE member_id="member_59";
+UPDATE members SET nickname="깊은사유" WHERE member_id="member_60";
+UPDATE members SET nickname="행복한웃음" WHERE member_id="member_61";
+UPDATE members SET nickname="눈물의밤" WHERE member_id="member_62";
+UPDATE members SET nickname="유쾌한이야기" WHERE member_id="member_63";
+UPDATE members SET nickname="진지한대화" WHERE member_id="member_64";
+UPDATE members SET nickname="기쁨의추억" WHERE member_id="member_65";
+UPDATE members SET nickname="비통한눈물" WHERE member_id="member_66";
+UPDATE members SET nickname="웃음의날" WHERE member_id="member_67";
+UPDATE members SET nickname="심각한순간" WHERE member_id="member_68";
+UPDATE members SET nickname="행복의추억" WHERE member_id="member_69";
+UPDATE members SET nickname="눈물의순간" WHERE member_id="member_70";
+UPDATE members SET nickname="코믹한사연" WHERE member_id="member_71";
+UPDATE members SET nickname="깊은단상" WHERE member_id="member_72";
+UPDATE members SET nickname="기쁜순간" WHERE member_id="member_73";
+UPDATE members SET nickname="슬픔의밤" WHERE member_id="member_74";
+UPDATE members SET nickname="유쾌한순간" WHERE member_id="member_75";
+UPDATE members SET nickname="진지한생각" WHERE member_id="member_76";
+UPDATE members SET nickname="행복한기억" WHERE member_id="member_77";
+UPDATE members SET nickname="눈물의날" WHERE member_id="member_78";
+UPDATE members SET nickname="재밌는순간" WHERE member_id="member_79";
+UPDATE members SET nickname="깊은밤" WHERE member_id="member_80";
+UPDATE members SET nickname="웃음의순간" WHERE member_id="member_81";
+UPDATE members SET nickname="심각한상황" WHERE member_id="member_82";
+UPDATE members SET nickname="행복의기억" WHERE member_id="member_83";
+UPDATE members SET nickname="눈물의이야기" WHERE member_id="member_84";
+UPDATE members SET nickname="코믹한웃음" WHERE member_id="member_85";
+UPDATE members SET nickname="깊은밤하늘" WHERE member_id="member_86";
+UPDATE members SET nickname="기쁨의날" WHERE member_id="member_87";
+UPDATE members SET nickname="슬픔의이별" WHERE member_id="member_88";
+UPDATE members SET nickname="유쾌한하루" WHERE member_id="member_89";
+UPDATE members SET nickname="진지한토론" WHERE member_id="member_90";
+UPDATE members SET nickname="행복한모임" WHERE member_id="member_91";
+UPDATE members SET nickname="눈물의추억" WHERE member_id="member_92";
+UPDATE members SET nickname="웃음의모험" WHERE member_id="member_93";
+UPDATE members SET nickname="심각한생각" WHERE member_id="member_94";
+UPDATE members SET nickname="행복한만남" WHERE member_id="member_95";
+UPDATE members SET nickname="눈물의만남" WHERE member_id="member_96";
+UPDATE members SET nickname="코믹한순간" WHERE member_id="member_97";
+UPDATE members SET nickname="깊은대화" WHERE member_id="member_98";
+UPDATE members SET nickname="기쁨의만남" WHERE member_id="member_99";
+UPDATE members SET nickname="슬픔의기억" WHERE member_id="member_100";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/237/200/300" WHERE member_id="member_1";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/1/200/300" WHERE member_id="member_20";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/0/5000/3333" WHERE member_id="member_21";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/10/2500/1667" WHERE member_id="member_22";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/11/2500/1667" WHERE member_id="member_23";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/12/2500/1667" WHERE member_id="member_24";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/16/2500/1667" WHERE member_id="member_25";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/17/2500/1667" WHERE member_id="member_26";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/15/2500/1667" WHERE member_id="member_27";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/19/2500/1667" WHERE member_id="member_28";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/18/2500/1667" WHERE member_id="member_29";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/20/3670/2462" WHERE member_id="member_30";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/21/3008/2008" WHERE member_id="member_31";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/22/4434/3729" WHERE member_id="member_32";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/23/3887/4899" WHERE member_id="member_33";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/25/5000/3333" WHERE member_id="member_34";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/24/4855/1803" WHERE member_id="member_35";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/26/4209/2769" WHERE member_id="member_36";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/27/3264/1836" WHERE member_id="member_37";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/28/4928/3264" WHERE member_id="member_38";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/29/4000/2670" WHERE member_id="member_39";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/51/5000/3333" WHERE member_id="member_50";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/52/1280/853" WHERE member_id="member_51";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/53/1280/1280" WHERE member_id="member_52";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/55/4608/3072" WHERE member_id="member_53";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/56/2880/1920" WHERE member_id="member_54";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/57/2448/3264" WHERE member_id="member_55";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/58/1280/853" WHERE member_id="member_56";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/59/2464/1632" WHERE member_id="member_57";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/60/1920/1200" WHERE member_id="member_58";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/61/3264/2448" WHERE member_id="member_59";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/62/2000/1333" WHERE member_id="member_60";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/63/5000/2813" WHERE member_id="member_61";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/64/4326/2884" WHERE member_id="member_62";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/65/4912/3264" WHERE member_id="member_63";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/66/3264/2448" WHERE member_id="member_64";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/67/2848/4288" WHERE member_id="member_65";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/68/4608/3072" WHERE member_id="member_66";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/69/4912/3264" WHERE member_id="member_67";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/70/3011/2000" WHERE member_id="member_68";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/71/5000/3333" WHERE member_id="member_69";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/72/3000/2000" WHERE member_id="member_70";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/73/5000/3333" WHERE member_id="member_71";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/74/4288/2848" WHERE member_id="member_72";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/75/1999/2998" WHERE member_id="member_73";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/76/4912/3264" WHERE member_id="member_74";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/77/1631/1102" WHERE member_id="member_75";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/78/1584/2376" WHERE member_id="member_76";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/79/2000/3011" WHERE member_id="member_77";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/80/3888/2592" WHERE member_id="member_78";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/90/3000/1992" WHERE member_id="member_79";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/51/5000/3333" WHERE member_id="member_80";
+
 ### 빌딩
-UPDATE building SET building_name = '예시빌딩0', profile_activated = TRUE, road_addr = '서울시 예시구 예시동 1-0', longitude = 126.9780, latitude = 37.5665, feed_ai_summary = '예시 요약 0' WHERE building_id = 10000;
-UPDATE building SET building_name = '예시빌딩1', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 1-1', longitude = 126.9780, latitude = 37.5665, feed_ai_summary = '예시 요약 1' WHERE building_id = 10001;
-UPDATE building SET building_name = '예시빌딩2', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 2-2', longitude = 127.0280, latitude = 37.5700, feed_ai_summary = '예시 요약 2' WHERE building_id = 10002;
-UPDATE building SET building_name = '예시빌딩3', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 3-3', longitude = 126.9880, latitude = 37.5710, feed_ai_summary = '예시 요약 3' WHERE building_id = 10003;
-UPDATE building SET building_name = '예시빌딩4', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 4-4', longitude = 127.0380, latitude = 37.5720, feed_ai_summary = '예시 요약 4' WHERE building_id = 10004;
-UPDATE building SET building_name = '예시빌딩5', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 5-5', longitude = 126.9980, latitude = 37.5730, feed_ai_summary = '예시 요약 5' WHERE building_id = 10005;
-UPDATE building SET building_name = '예시빌딩6', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 6-6', longitude = 127.0480, latitude = 37.5740, feed_ai_summary = '예시 요약 6' WHERE building_id = 10006;
-UPDATE building SET building_name = '예시빌딩7', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 7-7', longitude = 127.0080, latitude = 37.5750, feed_ai_summary = '예시 요약 7' WHERE building_id = 10007;
-UPDATE building SET building_name = '예시빌딩8', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 8-8', longitude = 127.0580, latitude = 37.5760, feed_ai_summary = '예시 요약 8' WHERE building_id = 10008;
-UPDATE building SET building_name = '예시빌딩9', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 9-9', longitude = 127.0180, latitude = 37.5770, feed_ai_summary = '예시 요약 9' WHERE building_id = 10009;
-UPDATE building SET building_name = '예시빌딩10', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 10-10', longitude = 127.0680, latitude = 37.5780, feed_ai_summary = '예시 요약 10' WHERE building_id = 10010;
-UPDATE building SET building_name = '예시빌딩11', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 11-11', longitude = 127.0280, latitude = 37.5790, feed_ai_summary = '예시 요약 11' WHERE building_id = 10011;
-UPDATE building SET building_name = '예시빌딩12', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 12-12', longitude = 127.0780, latitude = 37.5800, feed_ai_summary = '예시 요약 12' WHERE building_id = 10012;
-UPDATE building SET building_name = '예시빌딩13', profile_activated = FALSE, road_addr = '서울시 예시구 예시동 13-13', longitude = 127.0380, latitude = 37.5810, feed_ai_summary = '예시 요약 13' WHERE building_id = 10013;
+UPDATE building SET building_name = '역삼타워', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 101-1', longitude = 127.0350, latitude = 37.4979, feed_ai_summary = '강남 중심에 위치한 모던한 타워' WHERE building_id = 10000;
+UPDATE building SET building_name = '테헤란로빌딩', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 102-2', longitude = 127.0360, latitude = 37.4989, feed_ai_summary = '현대적인 설계를 자랑하는 빌딩' WHERE building_id = 10001;
+UPDATE building SET building_name = '프라임센터', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 103-3', longitude = 127.0370, latitude = 37.4999, feed_ai_summary = '편리한 교통을 갖춘 업무용 센터' WHERE building_id = 10002;
+UPDATE building SET building_name = '미래타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 104-4', longitude = 127.0380, latitude = 37.5009, feed_ai_summary = '녹지 공간과 함께하는 미래 지향적 타워' WHERE building_id = 10003;
+UPDATE building SET building_name = '글로벌센터', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 105-5', longitude = 127.0390, latitude = 37.5019, feed_ai_summary = '국제적인 비즈니스 허브' WHERE building_id = 10004;
+UPDATE building SET building_name = '하이테크빌딩', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 106-6', longitude = 127.0400, latitude = 37.5029, feed_ai_summary = '첨단 기술을 갖춘 하이테크 빌딩' WHERE building_id = 10005;
+UPDATE building SET building_name = '역삼스퀘어', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 107-7', longitude = 127.0410, latitude = 37.5039, feed_ai_summary = '비즈니스와 문화의 중심 스퀘어' WHERE building_id = 10006;
+UPDATE building SET building_name = '강남비즈타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 108-8', longitude = 127.0420, latitude = 37.5049, feed_ai_summary = '비즈니스에 최적화된 타워' WHERE building_id = 10007;
+UPDATE building SET building_name = 'IT밸리', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 109-9', longitude = 127.0430, latitude = 37.5059, feed_ai_summary = 'IT 기업들을 위한 전문 밸리' WHERE building_id = 10008;
+UPDATE building SET building_name = '크리에이티브타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 110-10', longitude = 127.0440, latitude = 37.5069, feed_ai_summary = '창의적 공간을 제공하는 타워' WHERE building_id = 10009;
+UPDATE building SET building_name = '비즈니스하우스', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 111-11', longitude = 127.0450, latitude = 37.5079, feed_ai_summary = '비즈니스의 새로운 기준' WHERE building_id = 10010;
+UPDATE building SET building_name = '아트센터', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 112-12', longitude = 127.0460, latitude = 37.5089, feed_ai_summary = '예술과 업무의 융합 공간' WHERE building_id = 10011;
+UPDATE building SET building_name = '스마트타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 113-13', longitude = 127.0470, latitude = 37.5099, feed_ai_summary = '스마트 기술을 갖춘 타워' WHERE building_id = 10012;
+UPDATE building SET building_name = '에코타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 114-14', longitude = 127.0480, latitude = 37.5109, feed_ai_summary = '친환경 설계를 자랑하는 타워' WHERE building_id = 10013;
+UPDATE building SET building_name = '럭셔리센터', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 115-15', longitude = 127.0490, latitude = 37.5119, feed_ai_summary = '럭셔리한 비즈니스 센터' WHERE building_id = 10014;
+UPDATE building SET building_name = '디지털타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 116-16', longitude = 127.0500, latitude = 37.5129, feed_ai_summary = '디지털 혁신을 위한 타워' WHERE building_id = 10015;
+UPDATE building SET building_name = '유니콘빌딩', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 117-17', longitude = 127.0510, latitude = 37.5139, feed_ai_summary = '유니콘 기업을 위한 빌딩' WHERE building_id = 10016;
+UPDATE building SET building_name = '솔라타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 118-18', longitude = 127.0520, latitude = 37.5149, feed_ai_summary = '태양광 에너지를 사용하는 타워' WHERE building_id = 10017;
+UPDATE building SET building_name = '리더스센터', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 119-19', longitude = 127.0530, latitude = 37.5159, feed_ai_summary = '리더들을 위한 비즈니스 센터' WHERE building_id = 10018;
+UPDATE building SET building_name = '파이낸스타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 120-20', longitude = 127.0540, latitude = 37.5169, feed_ai_summary = '금융 기업들을 위한 타워' WHERE building_id = 10019;
+UPDATE building SET building_name = '에비뉴타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 121-21', longitude = 127.0550, latitude = 37.5179, feed_ai_summary = '쇼핑과 업무가 결합된 타워' WHERE building_id = 10020;
+UPDATE building SET building_name = '글로벌하우스', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 122-22', longitude = 127.0560, latitude = 37.5189, feed_ai_summary = '글로벌 비즈니스 허브' WHERE building_id = 10021;
+UPDATE building SET building_name = '넥스트타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 123-23', longitude = 127.0570, latitude = 37.5199, feed_ai_summary = '미래를 준비하는 타워' WHERE building_id = 10022;
+UPDATE building SET building_name = '업무타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 124-24', longitude = 127.0580, latitude = 37.5209, feed_ai_summary = '업무 효율성을 극대화한 타워' WHERE building_id = 10023;
+UPDATE building SET building_name = '포커스빌딩', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 125-25', longitude = 127.0590, latitude = 37.5219, feed_ai_summary = '집중 업무 환경 제공' WHERE building_id = 10024;
+UPDATE building SET building_name = '스타트업타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 126-26', longitude = 127.0600, latitude = 37.5229, feed_ai_summary = '스타트업을 위한 타워' WHERE building_id = 10025;
+UPDATE building SET building_name = '이노베이션타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 127-27', longitude = 127.0610, latitude = 37.5239, feed_ai_summary = '혁신적인 업무 공간';
+
 ###찜
 
 
@@ -1031,23 +1197,60 @@ INSERT INTO chat_entrance (chatroom_id, chatroom_member_id, chatroom_member_type
 (10104, 'member_100', 'MEMBER', NOW(), FALSE, TRUE),
 (10104, 'member_10', 'MEMBER', NOW(), FALSE, TRUE);
 
-###자기 자신이 스스로 구독한 사람이 없어서 한 명 추가.
-UPDATE zzim SET building_id=10000,subscription_provider_id='member_1',zzim_type='SUBSCRIPTION' WHERE zzim_id=10000;
 ##95이상 activated가 false 되어있는데 꼭 그런 것은 아님!(그럴 때도 있지만)
 UPDATE feed_attachment SET blurred_file_url = NULL WHERE attachment_id=10096;
 UPDATE feed_attachment SET blurred_file_url = NULL WHERE attachment_id=10098;
 UPDATE feed SET building_id = NULL WHERE feed_category = 'NOTICE';
 INSERT INTO member_relationship(member_relationship_id,from_id,to_id,relationship_type,activated) VALUES
-(10100,'member_1','member_3','BLOCK',1),
-(10101,'member_1','member_4','FOLLOW',1),
-(10102,'member_1','member_5','FOLLOW',1),
-(10103,'member_1','member_6','FOLLOW',1),
-(10104,'member_99','member_1','FOLLOW',1);
+(10100,'member_1','member_3','BLOCK',1);
 INSERT INTO member_relationship(from_id,to_id,relationship_type,activated) VALUES
 ('member_1','member_15','BLOCK',1);
+INSERT INTO member_relationship (from_id, to_id, relationship_type, activated)
+VALUES
+ ('member_1', 'member_50', 'FOLLOW', true),
+ ('member_1', 'member_51', 'FOLLOW', true),
+ ('member_1', 'member_52', 'FOLLOW', true),
+ ('member_1', 'member_53', 'FOLLOW', true),
+ ('member_1', 'member_54', 'FOLLOW', true),
+ ('member_1', 'member_55', 'FOLLOW', true),
+ ('member_1', 'member_56', 'FOLLOW', true),
+ ('member_1', 'member_57', 'FOLLOW', true),
+ ('member_1', 'member_58', 'FOLLOW', true),
+ ('member_1', 'member_59', 'FOLLOW', true),
+ ('member_1', 'member_60', 'FOLLOW', true),
+ ('member_1', 'member_61', 'FOLLOW', true),
+ ('member_1', 'member_62', 'FOLLOW', true),
+ ('member_20', 'member_1', 'FOLLOW', true),
+ ('member_21', 'member_1', 'FOLLOW', true),
+ ('member_22', 'member_1', 'FOLLOW', true),
+ ('member_23', 'member_1', 'FOLLOW', true),
+ ('member_24', 'member_1', 'FOLLOW', true),
+ ('member_25', 'member_1', 'FOLLOW', true),
+ ('member_26', 'member_1', 'FOLLOW', true),
+ ('member_27', 'member_1', 'FOLLOW', true),
+ ('member_28', 'member_1', 'FOLLOW', true),
+ ('member_29', 'member_1', 'FOLLOW', true),
+ ('member_1', 'member_63', 'FOLLOW', true),
+ ('member_1', 'member_64', 'FOLLOW', true),
+ ('member_1', 'member_65', 'FOLLOW', true),
+ ('member_1', 'member_66', 'FOLLOW', true),
+ ('member_1', 'member_67', 'FOLLOW', true),
+ ('member_1', 'member_68', 'FOLLOW', true),
+ ('member_1', 'member_69', 'FOLLOW', true),
+ ('member_1', 'member_70', 'FOLLOW', true),
+ ('member_1', 'member_71', 'FOLLOW', true),
+ ('member_1', 'member_72', 'FOLLOW', true),
+ ('member_1', 'member_73', 'FOLLOW', true),
+ ('member_1', 'member_74', 'FOLLOW', true),
+ ('member_1', 'member_75', 'FOLLOW', true),
+ ('member_1', 'member_76', 'FOLLOW', true),
+ ('member_1', 'member_77', 'FOLLOW', true),
+ ('member_1', 'member_78', 'FOLLOW', true),
+ ('member_1', 'member_79', 'FOLLOW', true),
+ ('member_1', 'member_80', 'FOLLOW', true);
+
+
 ### 1. 건물 합치기 기능을 위해 필요한 쿼리(임시)
-INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated)
-VALUES ('member_1', NULL, 10003, 'member_1', 'SUBSCRIPTION', 1);
 
 
 ### 관리자 계정 추가
@@ -1093,18 +1296,120 @@ INSERT INTO feed_attachment (attachment_id, feed_id, file_url, file_type, blurre
 SELECT * FROM feed_attachment;
 
 
-### 건물 구독 목록 데이터 추가 
+### 건물 구독 목록 데이터 추가
 INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
 VALUES
-("member_99", null, 10089, "member_99", "SUBSCRIPTION", 1),
-("member_1",null,10000,null,"SUBSCRIPTION",1),
-("member_2",null,10000,null,"SUBSCRIPTION",1),
-("member_3",null,10000,null,"SUBSCRIPTION",1),
-("member_4",null,10000,null,"SUBSCRIPTION",1),
-("member_5",null,10000,null,"SUBSCRIPTION",1),
-("member_6",null,10000,null,"SUBSCRIPTION",1);
+("member_5", null, 10000, null, "SUBSCRIPTION", 1),
+("member_5", null, 10001, null, "SUBSCRIPTION", 1),
+("member_5", null, 10002, null, "SUBSCRIPTION", 1),
+("member_5", null, 10003, null, "SUBSCRIPTION", 1),
+("member_5", null, 10004, null, "SUBSCRIPTION", 1),
+("member_5", null, 10005, null, "SUBSCRIPTION", 1),
+("member_5", null, 10006, null, "SUBSCRIPTION", 1),
+("member_5", null, 10007, null, "SUBSCRIPTION", 1),
+("member_5", null, 10008, null, "SUBSCRIPTION", 1),
+("member_5", null, 10009, null, "SUBSCRIPTION", 1),
+("member_5", null, 10010, null, "SUBSCRIPTION", 1),
+("member_5", null, 10011, null, "SUBSCRIPTION", 1),
+("member_5", null, 10012, null, "SUBSCRIPTION", 1),
+("member_5", null, 10013, null, "SUBSCRIPTION", 1),
+("member_5", null, 10014, null, "SUBSCRIPTION", 1),
+("member_5", null, 10015, null, "SUBSCRIPTION", 1),
+("member_5", null, 10016, null, "SUBSCRIPTION", 1),
+("member_5", null, 10017, null, "SUBSCRIPTION", 1),
+("member_5", null, 10018, null, "SUBSCRIPTION", 1),
+("member_5", null, 10019, null, "SUBSCRIPTION", 1),
+("member_5", null, 10020, null, "SUBSCRIPTION", 1),
+("member_5", null, 10021, null, "SUBSCRIPTION", 1),
+("member_5", null, 10022, null, "SUBSCRIPTION", 1),
+("member_5", null, 10023, null, "SUBSCRIPTION", 1),
+("member_5", null, 10024, null, "SUBSCRIPTION", 1),
+("member_5", null, 10025, null, "SUBSCRIPTION", 1);
 INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
-VALUES ("member_100", null, 10089, "member_99", "SUBSCRIPTION", 1);
+VALUES
+("member_4", null, 10000, null, "SUBSCRIPTION", 1),
+("member_4", null, 10001, null, "SUBSCRIPTION", 1),
+("member_4", null, 10002, null, "SUBSCRIPTION", 1),
+("member_4", null, 10003, null, "SUBSCRIPTION", 1),
+("member_4", null, 10004, null, "SUBSCRIPTION", 1),
+("member_4", null, 10005, null, "SUBSCRIPTION", 1),
+("member_4", null, 10006, null, "SUBSCRIPTION", 1),
+("member_4", null, 10007, null, "SUBSCRIPTION", 1),
+("member_4", null, 10008, null, "SUBSCRIPTION", 1),
+("member_4", null, 10009, null, "SUBSCRIPTION", 1),
+("member_4", null, 10010, null, "SUBSCRIPTION", 1),
+("member_4", null, 10011, null, "SUBSCRIPTION", 1),
+("member_4", null, 10012, null, "SUBSCRIPTION", 1),
+("member_4", null, 10013, null, "SUBSCRIPTION", 1),
+("member_4", null, 10014, null, "SUBSCRIPTION", 1),
+("member_4", null, 10015, null, "SUBSCRIPTION", 1),
+("member_4", null, 10016, null, "SUBSCRIPTION", 1),
+("member_4", null, 10017, null, "SUBSCRIPTION", 1),
+("member_4", null, 10018, null, "SUBSCRIPTION", 1),
+("member_4", null, 10019, null, "SUBSCRIPTION", 1),
+("member_4", null, 10020, null, "SUBSCRIPTION", 1),
+("member_4", null, 10021, null, "SUBSCRIPTION", 1),
+("member_4", null, 10022, null, "SUBSCRIPTION", 1),
+("member_4", null, 10023, null, "SUBSCRIPTION", 1),
+("member_4", null, 10024, null, "SUBSCRIPTION", 1),
+("member_4", null, 10025, null, "SUBSCRIPTION", 1);
+INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
+VALUES
+("member_3", null, 10000, null, "SUBSCRIPTION", 1),
+("member_3", null, 10001, null, "SUBSCRIPTION", 1),
+("member_3", null, 10002, null, "SUBSCRIPTION", 1),
+("member_3", null, 10003, null, "SUBSCRIPTION", 1),
+("member_3", null, 10004, null, "SUBSCRIPTION", 1),
+("member_3", null, 10005, null, "SUBSCRIPTION", 1),
+("member_3", null, 10006, null, "SUBSCRIPTION", 1),
+("member_3", null, 10007, null, "SUBSCRIPTION", 1),
+("member_3", null, 10008, null, "SUBSCRIPTION", 1),
+("member_3", null, 10009, null, "SUBSCRIPTION", 1),
+("member_3", null, 10010, null, "SUBSCRIPTION", 1),
+("member_3", null, 10011, null, "SUBSCRIPTION", 1),
+("member_3", null, 10012, null, "SUBSCRIPTION", 1),
+("member_3", null, 10013, null, "SUBSCRIPTION", 1),
+("member_3", null, 10014, null, "SUBSCRIPTION", 1),
+("member_3", null, 10015, null, "SUBSCRIPTION", 1),
+("member_3", null, 10016, null, "SUBSCRIPTION", 1),
+("member_3", null, 10017, null, "SUBSCRIPTION", 1),
+("member_3", null, 10018, null, "SUBSCRIPTION", 1),
+("member_3", null, 10019, null, "SUBSCRIPTION", 1),
+("member_3", null, 10020, null, "SUBSCRIPTION", 1),
+("member_3", null, 10021, null, "SUBSCRIPTION", 1),
+("member_3", null, 10022, null, "SUBSCRIPTION", 1),
+("member_3", null, 10023, null, "SUBSCRIPTION", 1),
+("member_3", null, 10024, null, "SUBSCRIPTION", 1),
+("member_3", null, 10025, null, "SUBSCRIPTION", 1);
+INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
+VALUES
+("member_2", null, 10000, null, "SUBSCRIPTION", 1),
+("member_2", null, 10001, null, "SUBSCRIPTION", 1),
+("member_2", null, 10002, null, "SUBSCRIPTION", 1),
+("member_2", null, 10003, null, "SUBSCRIPTION", 1),
+("member_2", null, 10004, null, "SUBSCRIPTION", 1),
+("member_2", null, 10005, null, "SUBSCRIPTION", 1),
+("member_2", null, 10006, null, "SUBSCRIPTION", 1),
+("member_2", null, 10007, null, "SUBSCRIPTION", 1),
+("member_2", null, 10008, null, "SUBSCRIPTION", 1),
+("member_2", null, 10009, null, "SUBSCRIPTION", 1),
+("member_2", null, 10010, null, "SUBSCRIPTION", 1),
+("member_2", null, 10011, null, "SUBSCRIPTION", 1),
+("member_2", null, 10012, null, "SUBSCRIPTION", 1),
+("member_2", null, 10013, null, "SUBSCRIPTION", 1),
+("member_2", null, 10014, null, "SUBSCRIPTION", 1),
+("member_2", null, 10015, null, "SUBSCRIPTION", 1),
+("member_2", null, 10016, null, "SUBSCRIPTION", 1),
+("member_2", null, 10017, null, "SUBSCRIPTION", 1),
+("member_2", null, 10018, null, "SUBSCRIPTION", 1),
+("member_2", null, 10019, null, "SUBSCRIPTION", 1),
+("member_2", null, 10020, null, "SUBSCRIPTION", 1),
+("member_2", null, 10021, null, "SUBSCRIPTION", 1),
+("member_2", null, 10022, null, "SUBSCRIPTION", 1),
+("member_2", null, 10023, null, "SUBSCRIPTION", 1),
+("member_2", null, 10024, null, "SUBSCRIPTION", 1),
+("member_2", null, 10025, null, "SUBSCRIPTION", 1);
+
 ### 건물별 피드 데이터 추가
 INSERT INTO feed (writer_id, building_id, main_activated, public_range, title, feed_text, view_cnt, written_time, feed_category, modified, activated) VALUES
 ('member_1', 10089, 1, 'PUBLIC', 'Title_10100', 'Feed text for feed 10100', 100, CURRENT_TIMESTAMP, 'GENERAL', 0, 1),
