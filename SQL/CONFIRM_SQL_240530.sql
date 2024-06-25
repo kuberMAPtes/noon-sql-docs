@@ -807,7 +807,7 @@ CALL insert_sample_chat_applies();
 CALL insert_sample_chatrooms();
 CALL insert_sample_chat_entrances();
 ### 멤버
-UPDATE members SET nickname="웃음꽃피네",pwd="noon0716",phone_number="010-4543-1211",unlock_time="2024-07-20 01:01:01",profile_intro="반가워나는멤버1",dajung_score=89,member_profile_public_range="MUTUAL_ONLY" WHERE member_id="member_1";
+UPDATE members SET nickname="웃음꽃피네",pwd="noon0716",phone_number="010-4543-1211",unlock_time="0101-01-01 01:01:01",profile_intro="반가워나는멤버1",dajung_score=89,member_profile_public_range="MUTUAL_ONLY" WHERE member_id="member_1";
 UPDATE members SET member_role = 'MEMBER', nickname = '예시멤버10', pwd = 'noon0716', phone_number = '010-2345-6789', unlock_time = '2024-07-30 01:01:01', profile_photo_url = 'http://example.com/photo10.jpg', profile_intro = '여기 예시 멤버10입니다.', dajung_score = 47, signed_off = FALSE, building_subscription_public_range = 'PUBLIC', all_feed_public_range = 'FOLLOWER_ONLY', member_profile_public_range = 'PRIVATE', receiving_all_notification_allowed = FALSE WHERE member_id = 'member_10';
 UPDATE members SET member_role="MEMBER", nickname="잠금된닝겐10", pwd="noon0716",phone_number="010-1234-5842",unlock_time="2024-07-30 01:01:01",profile_intro="반가워나는잠금된멤버10", dajung_score=10,member_profile_public_range="PUBLIC" WHERE member_id="member_10";
 UPDATE members SET nickname="특별한닝겐2",pwd="noon0716",phone_number="010-4543-1541",unlock_time="0101-01-01 01:01:01",profile_intro="반가워나는멤버2",dajung_score=85,member_profile_public_range="FOLLOWER_ONLY" WHERE member_id="member_2";
