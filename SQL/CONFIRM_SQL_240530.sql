@@ -767,7 +767,7 @@ ALTER TABLE chat_apply AUTO_INCREMENT = 10000;
 CREATE TABLE chatroom (
     chatroom_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     chatroom_creator_id VARCHAR(20) NOT NULL,
-    building_id INT NOT NULL,
+    building_id INT,
     chatroom_name VARCHAR(50) NOT NULL,
     chatroom_type ENUM('PRIVATE_CHATTING','GROUP_CHATTING') NOT NULL,
     chatroom_dajung_temp_min FLOAT NOT NULL DEFAULT 0,
