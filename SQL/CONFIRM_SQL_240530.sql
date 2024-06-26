@@ -685,6 +685,14 @@ FOREIGN KEY (subscription_provider_id) REFERENCES members(member_id)
 ALTER TABLE zzim AUTO_INCREMENT = 10000;
 CREATE INDEX idx_zzim_zzim_type ON zzim(zzim_type);
 
+CREATE TABLE feed_votes (
+    feed_id INT PRIMARY KEY,
+    question VARCHAR(255) NOT NULL,
+    options JSON NOT NULL,
+    votes JSON NOT NULL,
+    voter_ids JSON NOT NULL,
+    FOREIGN KEY (feed_id) REFERENCES feed(feed_id)
+);
 CREATE TABLE feed_comment (
     comment_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     feed_id INT NOT NULL,
