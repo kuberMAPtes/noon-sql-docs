@@ -962,6 +962,8 @@ UPDATE members SET profile_photo_url="https://picsum.photos/id/79/2000/3011" WHE
 UPDATE members SET profile_photo_url="https://picsum.photos/id/80/3888/2592" WHERE member_id="member_78";
 UPDATE members SET profile_photo_url="https://picsum.photos/id/90/3000/1992" WHERE member_id="member_79";
 UPDATE members SET profile_photo_url="https://picsum.photos/id/51/5000/3333" WHERE member_id="member_80";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/237/200/300" WHERE member_id="member_90";
+
 
 ### 빌딩
 UPDATE building SET building_name = '역삼타워', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 101-1', longitude = 127.0350, latitude = 37.4979, feed_ai_summary = '강남 중심에 위치한 모던한 타워' WHERE building_id = 10000;
