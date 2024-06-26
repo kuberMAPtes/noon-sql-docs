@@ -1413,14 +1413,14 @@ VALUES
 
 INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
 VALUES
-("member_99", null, 10089, "member_99", "SUBSCRIPTION", 1),
-("member_88", null, 10089, "member_88", "SUBSCRIPTION", 1),
-("member_1",null,10000,null,"SUBSCRIPTION",1),
-("member_2",null,10000,null,"SUBSCRIPTION",1),
-("member_3",null,10000,null,"SUBSCRIPTION",1),
-("member_4",null,10000,null,"SUBSCRIPTION",1),
-("member_5",null,10000,null,"SUBSCRIPTION",1),
-("member_6",null,10000,null,"SUBSCRIPTION",1);
+("member_70", null, 10089, "member_70", "SUBSCRIPTION", 1),
+("member_71", null, 10089, "member_71", "SUBSCRIPTION", 1),
+("member_72",null,10089,"member_70","SUBSCRIPTION",1),
+("member_73",null,10089,"member_70","SUBSCRIPTION",1),
+("member_74",null,10089,"member_70","SUBSCRIPTION",1),
+("member_75",null,10089,"member_70","SUBSCRIPTION",1),
+("member_76",null,10089,"member_70","SUBSCRIPTION",1),
+("member_77",null,10089,"member_70","SUBSCRIPTION",1);
 
 
 ### 건물별 피드 데이터 추가
