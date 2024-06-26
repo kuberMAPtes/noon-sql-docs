@@ -1274,7 +1274,7 @@ VALUES
         ) VALUES (
             'admin_1' ,
             'ADMIN',
-            'adminNickname_1',
+            '나는관리자',
             'noon0716',
             '010-1111-1111',
             '0001-01-01 01:01:01',
