@@ -767,10 +767,10 @@ ALTER TABLE chat_apply AUTO_INCREMENT = 10000;
 CREATE TABLE chatroom (
     chatroom_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     chatroom_creator_id VARCHAR(20) NOT NULL,
-    building_id INT NOT NULL,
+    building_id INT,
     chatroom_name VARCHAR(50) NOT NULL,
     chatroom_type ENUM('PRIVATE_CHATTING','GROUP_CHATTING') NOT NULL,
-    chatroom_dajung_temp_min FLOAT NOT NULL DEFAULT 0,
+    chatroom_dajung_temp_min FLOAT DEFAULT 0,
     activated BOOLEAN NOT NULL DEFAULT TRUE,
     FOREIGN KEY (chatroom_creator_id) REFERENCES members(member_id),
     FOREIGN KEY (building_id) REFERENCES building(building_id) -- Assuming building table exists
@@ -961,6 +961,8 @@ UPDATE members SET profile_photo_url="https://picsum.photos/id/79/2000/3011" WHE
 UPDATE members SET profile_photo_url="https://picsum.photos/id/80/3888/2592" WHERE member_id="member_78";
 UPDATE members SET profile_photo_url="https://picsum.photos/id/90/3000/1992" WHERE member_id="member_79";
 UPDATE members SET profile_photo_url="https://picsum.photos/id/51/5000/3333" WHERE member_id="member_80";
+UPDATE members SET profile_photo_url="https://picsum.photos/id/237/200/300" WHERE member_id="member_90";
+
 
 ### 빌딩
 UPDATE building SET building_name = '역삼타워', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 101-1', longitude = 127.0350, latitude = 37.4979, feed_ai_summary = '강남 중심에 위치한 모던한 타워' WHERE building_id = 10000;
@@ -1271,7 +1273,7 @@ VALUES
         ) VALUES (
             'admin_1' ,
             'ADMIN',
-            'adminNickname_1',
+            '나는관리자',
             'noon0716',
             '010-1111-1111',
             '0001-01-01 01:01:01',
@@ -1409,6 +1411,19 @@ VALUES
 ("member_2", null, 10024, null, "SUBSCRIPTION", 1),
 ("member_2", null, 10025, null, "SUBSCRIPTION", 1);
 
+
+INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
+VALUES
+("member_70", null, 10089, "member_70", "SUBSCRIPTION", 1),
+("member_71", null, 10089, "member_71", "SUBSCRIPTION", 1),
+("member_72",null,10089,"member_70","SUBSCRIPTION",1),
+("member_73",null,10089,"member_70","SUBSCRIPTION",1),
+("member_74",null,10089,"member_70","SUBSCRIPTION",1),
+("member_75",null,10089,"member_70","SUBSCRIPTION",1),
+("member_76",null,10089,"member_70","SUBSCRIPTION",1),
+("member_77",null,10089,"member_70","SUBSCRIPTION",1);
+
+
 ### 건물별 피드 데이터 추가
 INSERT INTO feed (writer_id, building_id, main_activated, public_range, title, feed_text, view_cnt, written_time, feed_category, modified, activated) VALUES
 ('member_1', 10089, 1, 'PUBLIC', 'Title_10100', 'Feed text for feed 10100', 100, CURRENT_TIMESTAMP, 'GENERAL', 0, 1),
@@ -1430,6 +1445,14 @@ INSERT into feed ( writer_id, building_id, main_activated, public_range, title, 
 ('member_81', 10089, 0, 'PUBLIC', 'Title_107', '헤헿헤헿', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
 ('member_23', 10089, 0, 'PUBLIC', 'Title_108', '다들 뭐해요', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
 ('member_45', 10089, 0, 'PUBLIC', 'Title_100', '보배반점 맛있어요 특히 크림짬뽕이 맛있음', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1);
+
+### 건물의 채팅방 추가
+INSERT INTO chatroom (chatroom_creator_id, building_id, chatroom_name, chatroom_type, chatroom_dajung_temp_min, activated) VALUES
+('member_1', 10089, '채팅방 1', 'GROUP_CHATTING', 0, TRUE),
+('member_1', 10089, '채팅방 2', 'GROUP_CHATTING', 0, TRUE),
+('member_1', 10089, '채팅방 3', 'GROUP_CHATTING', 0, TRUE),
+('member_1', 10089, '채팅방 4', 'GROUP_CHATTING', 0, TRUE),
+('member_1', 10089, '채팅방 5', 'GROUP_CHATTING', 0, TRUE);
 
 
 ### 프로필이 활성화 되어있는 건물 추가
