@@ -1432,6 +1432,14 @@ INSERT into feed ( writer_id, building_id, main_activated, public_range, title, 
 ('member_23', 10089, 0, 'PUBLIC', 'Title_108', '다들 뭐해요', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1),
 ('member_45', 10089, 0, 'PUBLIC', 'Title_100', '보배반점 맛있어요 특히 크림짬뽕이 맛있음', 0, '2024-06-05 10:39:38', 'GENERAL', 0, 1);
 
+### 건물의 채팅방 추가
+INSERT INTO chatroom (chatroom_creator_id, building_id, chatroom_name, chatroom_type, chatroom_dajung_temp_min, activated) VALUES
+('member_1', 10089, '채팅방 1', 'GROUP_CHATTING', 0, TRUE),
+('member_1', 10089, '채팅방 2', 'GROUP_CHATTING', 0, TRUE),
+('member_1', 10089, '채팅방 3', 'GROUP_CHATTING', 0, TRUE),
+('member_1', 10089, '채팅방 4', 'GROUP_CHATTING', 0, TRUE),
+('member_1', 10089, '채팅방 5', 'GROUP_CHATTING', 0, TRUE);
+
 
 ### 프로필이 활성화 되어있는 건물 추가
 UPDATE building
