@@ -807,8 +807,7 @@ CALL insert_sample_chat_applies();
 CALL insert_sample_chatrooms();
 CALL insert_sample_chat_entrances();
 ### 멤버
-UPDATE members SET nickname="웃음꽃피네",pwd="noon0716",phone_number="010-4543-1211",unlock_time="2024-07-20 01:01:01",profile_intro="반가워나는멤버1",dajung_score=89,member_profile_public_range="MUTUAL_ONLY" WHERE member_id="member_1";
-UPDATE members SET member_role = 'MEMBER', nickname = '예시멤버10', pwd = 'noon0716', phone_number = '010-2345-6789', unlock_time = '2024-07-30 01:01:01', profile_photo_url = 'http://example.com/photo10.jpg', profile_intro = '여기 예시 멤버10입니다.', dajung_score = 47, signed_off = FALSE, building_subscription_public_range = 'PUBLIC', all_feed_public_range = 'FOLLOWER_ONLY', member_profile_public_range = 'PRIVATE', receiving_all_notification_allowed = FALSE WHERE member_id = 'member_10';
+UPDATE members SET nickname="웃음꽃피네",pwd="noon0716",phone_number="010-4543-1211",unlock_time="0001-01-01 01:01:01",profile_intro="반가워나는멤버1",dajung_score=89,member_profile_public_range="MUTUAL_ONLY" WHERE member_id="member_1";
 UPDATE members SET member_role="MEMBER", nickname="잠금된닝겐10", pwd="noon0716",phone_number="010-1234-5842",unlock_time="2024-07-30 01:01:01",profile_intro="반가워나는잠금된멤버10", dajung_score=10,member_profile_public_range="PUBLIC" WHERE member_id="member_10";
 UPDATE members SET nickname="특별한닝겐2",pwd="noon0716",phone_number="010-4543-1541",unlock_time="0101-01-01 01:01:01",profile_intro="반가워나는멤버2",dajung_score=85,member_profile_public_range="FOLLOWER_ONLY" WHERE member_id="member_2";
 UPDATE members SET nickname="고독한사나이" WHERE member_id="member_2";
@@ -965,32 +964,32 @@ UPDATE members SET profile_photo_url="https://picsum.photos/id/51/5000/3333" WHE
 
 ### 빌딩
 UPDATE building SET building_name = '역삼타워', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 101-1', longitude = 127.0350, latitude = 37.4979, feed_ai_summary = '강남 중심에 위치한 모던한 타워' WHERE building_id = 10000;
-UPDATE building SET building_name = '테헤란로빌딩', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 102-2', longitude = 127.0360, latitude = 37.4989, feed_ai_summary = '현대적인 설계를 자랑하는 빌딩' WHERE building_id = 10001;
-UPDATE building SET building_name = '프라임센터', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 103-3', longitude = 127.0370, latitude = 37.4999, feed_ai_summary = '편리한 교통을 갖춘 업무용 센터' WHERE building_id = 10002;
-UPDATE building SET building_name = '미래타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 104-4', longitude = 127.0380, latitude = 37.5009, feed_ai_summary = '녹지 공간과 함께하는 미래 지향적 타워' WHERE building_id = 10003;
-UPDATE building SET building_name = '글로벌센터', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 105-5', longitude = 127.0390, latitude = 37.5019, feed_ai_summary = '국제적인 비즈니스 허브' WHERE building_id = 10004;
-UPDATE building SET building_name = '하이테크빌딩', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 106-6', longitude = 127.0400, latitude = 37.5029, feed_ai_summary = '첨단 기술을 갖춘 하이테크 빌딩' WHERE building_id = 10005;
-UPDATE building SET building_name = '역삼스퀘어', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 107-7', longitude = 127.0410, latitude = 37.5039, feed_ai_summary = '비즈니스와 문화의 중심 스퀘어' WHERE building_id = 10006;
-UPDATE building SET building_name = '강남비즈타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 108-8', longitude = 127.0420, latitude = 37.5049, feed_ai_summary = '비즈니스에 최적화된 타워' WHERE building_id = 10007;
-UPDATE building SET building_name = 'IT밸리', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 109-9', longitude = 127.0430, latitude = 37.5059, feed_ai_summary = 'IT 기업들을 위한 전문 밸리' WHERE building_id = 10008;
-UPDATE building SET building_name = '크리에이티브타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 110-10', longitude = 127.0440, latitude = 37.5069, feed_ai_summary = '창의적 공간을 제공하는 타워' WHERE building_id = 10009;
-UPDATE building SET building_name = '비즈니스하우스', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 111-11', longitude = 127.0450, latitude = 37.5079, feed_ai_summary = '비즈니스의 새로운 기준' WHERE building_id = 10010;
-UPDATE building SET building_name = '아트센터', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 112-12', longitude = 127.0460, latitude = 37.5089, feed_ai_summary = '예술과 업무의 융합 공간' WHERE building_id = 10011;
-UPDATE building SET building_name = '스마트타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 113-13', longitude = 127.0470, latitude = 37.5099, feed_ai_summary = '스마트 기술을 갖춘 타워' WHERE building_id = 10012;
-UPDATE building SET building_name = '에코타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 114-14', longitude = 127.0480, latitude = 37.5109, feed_ai_summary = '친환경 설계를 자랑하는 타워' WHERE building_id = 10013;
-UPDATE building SET building_name = '럭셔리센터', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 115-15', longitude = 127.0490, latitude = 37.5119, feed_ai_summary = '럭셔리한 비즈니스 센터' WHERE building_id = 10014;
-UPDATE building SET building_name = '디지털타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 116-16', longitude = 127.0500, latitude = 37.5129, feed_ai_summary = '디지털 혁신을 위한 타워' WHERE building_id = 10015;
-UPDATE building SET building_name = '유니콘빌딩', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 117-17', longitude = 127.0510, latitude = 37.5139, feed_ai_summary = '유니콘 기업을 위한 빌딩' WHERE building_id = 10016;
-UPDATE building SET building_name = '솔라타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 118-18', longitude = 127.0520, latitude = 37.5149, feed_ai_summary = '태양광 에너지를 사용하는 타워' WHERE building_id = 10017;
-UPDATE building SET building_name = '리더스센터', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 119-19', longitude = 127.0530, latitude = 37.5159, feed_ai_summary = '리더들을 위한 비즈니스 센터' WHERE building_id = 10018;
-UPDATE building SET building_name = '파이낸스타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 120-20', longitude = 127.0540, latitude = 37.5169, feed_ai_summary = '금융 기업들을 위한 타워' WHERE building_id = 10019;
-UPDATE building SET building_name = '에비뉴타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 121-21', longitude = 127.0550, latitude = 37.5179, feed_ai_summary = '쇼핑과 업무가 결합된 타워' WHERE building_id = 10020;
-UPDATE building SET building_name = '글로벌하우스', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 122-22', longitude = 127.0560, latitude = 37.5189, feed_ai_summary = '글로벌 비즈니스 허브' WHERE building_id = 10021;
-UPDATE building SET building_name = '넥스트타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 123-23', longitude = 127.0570, latitude = 37.5199, feed_ai_summary = '미래를 준비하는 타워' WHERE building_id = 10022;
-UPDATE building SET building_name = '업무타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 124-24', longitude = 127.0580, latitude = 37.5209, feed_ai_summary = '업무 효율성을 극대화한 타워' WHERE building_id = 10023;
-UPDATE building SET building_name = '포커스빌딩', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 125-25', longitude = 127.0590, latitude = 37.5219, feed_ai_summary = '집중 업무 환경 제공' WHERE building_id = 10024;
-UPDATE building SET building_name = '스타트업타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 126-26', longitude = 127.0600, latitude = 37.5229, feed_ai_summary = '스타트업을 위한 타워' WHERE building_id = 10025;
-UPDATE building SET building_name = '이노베이션타워', profile_activated = FALSE, road_addr = '서울시 강남구 역삼동 127-27', longitude = 127.0610, latitude = 37.5239, feed_ai_summary = '혁신적인 업무 공간';
+UPDATE building SET building_name = '테헤란로빌딩', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 102-2', longitude = 127.0360, latitude = 37.4989, feed_ai_summary = '현대적인 설계를 자랑하는 빌딩' WHERE building_id = 10001;
+UPDATE building SET building_name = '프라임센터', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 103-3', longitude = 127.0370, latitude = 37.4999, feed_ai_summary = '편리한 교통을 갖춘 업무용 센터' WHERE building_id = 10002;
+UPDATE building SET building_name = '미래타워', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 104-4', longitude = 127.0380, latitude = 37.5009, feed_ai_summary = '녹지 공간과 함께하는 미래 지향적 타워' WHERE building_id = 10003;
+UPDATE building SET building_name = '글로벌센터', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 105-5', longitude = 127.0390, latitude = 37.5019, feed_ai_summary = '국제적인 비즈니스 허브' WHERE building_id = 10004;
+UPDATE building SET building_name = '하이테크빌딩', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 106-6', longitude = 127.0400, latitude = 37.5029, feed_ai_summary = '첨단 기술을 갖춘 하이테크 빌딩' WHERE building_id = 10005;
+UPDATE building SET building_name = '역삼스퀘어', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 107-7', longitude = 127.0410, latitude = 37.5039, feed_ai_summary = '비즈니스와 문화의 중심 스퀘어' WHERE building_id = 10006;
+UPDATE building SET building_name = '강남비즈타워', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 108-8', longitude = 127.0420, latitude = 37.5049, feed_ai_summary = '비즈니스에 최적화된 타워' WHERE building_id = 10007;
+UPDATE building SET building_name = 'IT밸리', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 109-9', longitude = 127.0430, latitude = 37.5059, feed_ai_summary = 'IT 기업들을 위한 전문 밸리' WHERE building_id = 10008;
+UPDATE building SET building_name = '크리에이티브타워', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 110-10', longitude = 127.0440, latitude = 37.5069, feed_ai_summary = '창의적 공간을 제공하는 타워' WHERE building_id = 10009;
+UPDATE building SET building_name = '비즈니스하우스', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 111-11', longitude = 127.0450, latitude = 37.5079, feed_ai_summary = '비즈니스의 새로운 기준' WHERE building_id = 10010;
+UPDATE building SET building_name = '아트센터', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 112-12', longitude = 127.0460, latitude = 37.5089, feed_ai_summary = '예술과 업무의 융합 공간' WHERE building_id = 10011;
+UPDATE building SET building_name = '스마트타워', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 113-13', longitude = 127.0470, latitude = 37.5099, feed_ai_summary = '스마트 기술을 갖춘 타워' WHERE building_id = 10012;
+UPDATE building SET building_name = '에코타워', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 114-14', longitude = 127.0480, latitude = 37.5109, feed_ai_summary = '친환경 설계를 자랑하는 타워' WHERE building_id = 10013;
+UPDATE building SET building_name = '럭셔리센터', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 115-15', longitude = 127.0490, latitude = 37.5119, feed_ai_summary = '럭셔리한 비즈니스 센터' WHERE building_id = 10014;
+UPDATE building SET building_name = '디지털타워', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 116-16', longitude = 127.0500, latitude = 37.5129, feed_ai_summary = '디지털 혁신을 위한 타워' WHERE building_id = 10015;
+UPDATE building SET building_name = '유니콘빌딩', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 117-17', longitude = 127.0510, latitude = 37.5139, feed_ai_summary = '유니콘 기업을 위한 빌딩' WHERE building_id = 10016;
+UPDATE building SET building_name = '솔라타워', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 118-18', longitude = 127.0520, latitude = 37.5149, feed_ai_summary = '태양광 에너지를 사용하는 타워' WHERE building_id = 10017;
+UPDATE building SET building_name = '리더스센터', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 119-19', longitude = 127.0530, latitude = 37.5159, feed_ai_summary = '리더들을 위한 비즈니스 센터' WHERE building_id = 10018;
+UPDATE building SET building_name = '파이낸스타워', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 120-20', longitude = 127.0540, latitude = 37.5169, feed_ai_summary = '금융 기업들을 위한 타워' WHERE building_id = 10019;
+UPDATE building SET building_name = '에비뉴타워', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 121-21', longitude = 127.0550, latitude = 37.5179, feed_ai_summary = '쇼핑과 업무가 결합된 타워' WHERE building_id = 10020;
+UPDATE building SET building_name = '글로벌하우스', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 122-22', longitude = 127.0560, latitude = 37.5189, feed_ai_summary = '글로벌 비즈니스 허브' WHERE building_id = 10021;
+UPDATE building SET building_name = '넥스트타워', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 123-23', longitude = 127.0570, latitude = 37.5199, feed_ai_summary = '미래를 준비하는 타워' WHERE building_id = 10022;
+UPDATE building SET building_name = '업무타워', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 124-24', longitude = 127.0580, latitude = 37.5209, feed_ai_summary = '업무 효율성을 극대화한 타워' WHERE building_id = 10023;
+UPDATE building SET building_name = '포커스빌딩', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 125-25', longitude = 127.0590, latitude = 37.5219, feed_ai_summary = '집중 업무 환경 제공' WHERE building_id = 10024;
+UPDATE building SET building_name = '스타트업타워', profile_activated = TRUE , road_addr = '서울시 강남구 역삼동 126-26', longitude = 127.0600, latitude = 37.5229, feed_ai_summary = '스타트업을 위한 타워' WHERE building_id = 10025;
+UPDATE building SET building_name = '이노베이션타워', profile_activated = TRUE, road_addr = '서울시 강남구 역삼동 127-27', longitude = 127.0610, latitude = 37.5239, feed_ai_summary = '혁신적인 업무 공간' WHERE building_id = 10026;
 
 ###찜
 
