@@ -1410,6 +1410,19 @@ VALUES
 ("member_2", null, 10024, null, "SUBSCRIPTION", 1),
 ("member_2", null, 10025, null, "SUBSCRIPTION", 1);
 
+
+INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
+VALUES
+("member_99", null, 10089, "member_99", "SUBSCRIPTION", 1),
+("member_88", null, 10089, "member_88", "SUBSCRIPTION", 1),
+("member_1",null,10000,null,"SUBSCRIPTION",1),
+("member_2",null,10000,null,"SUBSCRIPTION",1),
+("member_3",null,10000,null,"SUBSCRIPTION",1),
+("member_4",null,10000,null,"SUBSCRIPTION",1),
+("member_5",null,10000,null,"SUBSCRIPTION",1),
+("member_6",null,10000,null,"SUBSCRIPTION",1);
+
+
 ### 건물별 피드 데이터 추가
 INSERT INTO feed (writer_id, building_id, main_activated, public_range, title, feed_text, view_cnt, written_time, feed_category, modified, activated) VALUES
 ('member_1', 10089, 1, 'PUBLIC', 'Title_10100', 'Feed text for feed 10100', 100, CURRENT_TIMESTAMP, 'GENERAL', 0, 1),
