@@ -31,6 +31,7 @@ DROP PROCEDURE IF EXISTS insert_sample_members;
 DROP PROCEDURE IF EXISTS insert_sample_buildings;
 DROP PROCEDURE IF EXISTS insert_sample_feeds;
 DROP PROCEDURE IF EXISTS insert_sample_zzims;
+DROP PROCEDURE IF EXISTS insert_sample_zzims_2;
 DROP PROCEDURE IF EXISTS insert_sample_feed_attachments;
 DROP PROCEDURE IF EXISTS insert_sample_tags;
 DROP PROCEDURE IF EXISTS insert_sample_tag_feeds;
@@ -41,10 +42,10 @@ DROP TABLE IF EXISTS tag;
 DROP TABLE IF EXISTS feed_attachment;
 DROP TABLE IF EXISTS feed_comment;
 DROP TABLE IF EXISTS zzim;
+DROP TABLE IF EXISTS feed_votes;
 DROP TABLE IF EXISTS feed;
 DROP TABLE IF EXISTS members;
 DROP TABLE IF EXISTS building;
-
 
 # building
 CREATE TABLE building (
@@ -163,6 +164,16 @@ CREATE TABLE tag_feed (
     FOREIGN KEY (tag_id) REFERENCES tag(tag_id)
 );
 ALTER TABLE tag_feed AUTO_INCREMENT = 10000;
+
+# feed_votes
+CREATE TABLE feed_votes (
+	feed_id INT PRIMARY KEY,
+    question VARCHAR(255) NOT NULL,
+    options JSON NOT NULL,
+    votes JSON NOT NULL,
+    voter_ids JSON NOT NULL,
+    FOREIGN KEY (feed_id) REFERENCES feed(feed_id)
+);
 
 # procedure : insert_sample_members()
 DELIMITER $$
@@ -286,22 +297,22 @@ BEGIN
     WHILE i <= 100 DO
 		IF (feed_id % 2 = 0) THEN
 			INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
-            VALUES ('member_1', feed_id, NULL, NULL, 'LIKE', TRUE);
+            VALUES ('member_1', feed_id, building_id, NULL, 'LIKE', TRUE);
         END IF;
         
 		IF (feed_id % 3 = 0) THEN
 			INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
-            VALUES ('member_1', feed_id, NULL, NULL, 'BOOKMARK', TRUE);
+            VALUES ('member_1', feed_id, building_id, NULL, 'BOOKMARK', TRUE);
         END IF;
         
 		IF (feed_id % 5 = 0) THEN
 			INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
-            VALUES ('member_2', feed_id, NULL, NULL, 'LIKE', TRUE);
+            VALUES ('member_2', feed_id, building_id, NULL, 'LIKE', TRUE);
         END IF;
         
 		IF (feed_id % 7 = 0) THEN
 			INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
-            VALUES ('member_2', feed_id, NULL, NULL, 'BOOKMARK', TRUE);
+            VALUES ('member_2', feed_id, building_id, NULL, 'BOOKMARK', TRUE);
         END IF;
         
 		IF (building_id % 5 = 0) THEN
@@ -440,6 +451,60 @@ CALL insert_sample_tags();
 CALL insert_sample_tag_feeds();
 CALL insert_sample_feed_comments();
 
+# test용 데이터 수정
+UPDATE zzim SET building_id = 10001 WHERE zzim_id = 10000;
+UPDATE zzim SET building_id = 10003 WHERE zzim_id = 10004;
+
+# procedure : insert_sample_zzims_add() 
+DELIMITER $$
+
+CREATE PROCEDURE insert_sample_zzims_2()
+BEGIN
+    DECLARE i INT DEFAULT 1;
+    DECLARE j INT DEFAULT 3;
+    DECLARE feed_id INT DEFAULT 10000;
+    
+    WHILE j <= 18 DO
+		SET i = 1;
+        SET feed_id = 10000;
+        
+		WHILE i <= 100 DO
+			IF (feed_id % 3 = 0) THEN
+				INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
+				VALUES (CONCAT('member_', j), feed_id, NULL, NULL, 'LIKE', TRUE);
+			END IF;
+			
+			IF (feed_id % 5 = 0) THEN
+				INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
+				VALUES (CONCAT('member_', j + 1), feed_id, NULL, NULL, 'LIKE', TRUE);
+			END IF;
+            
+			IF (feed_id % 7 = 0) THEN
+				INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
+				VALUES (CONCAT('member_', j + 1), feed_id, NULL, NULL, 'LIKE', TRUE);
+			END IF;
+			
+			IF (feed_id % 11 = 0) THEN
+				INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
+				VALUES (CONCAT('member_', j + 1), feed_id, NULL, NULL, 'LIKE', TRUE);
+			END IF;
+            
+			IF (feed_id % 13 = 0) THEN
+				INSERT INTO zzim (member_id, feed_id, building_id, subscription_provider_id, zzim_type, activated) 
+				VALUES (CONCAT('member_', j + 2), feed_id, NULL, NULL, 'LIKE', TRUE);
+			END IF;
+            
+			SET i = i + 1;
+			SET feed_id = feed_id + 1;
+		END WHILE;
+        SET j = j + 1;
+    END WHILE;
+END$$
+
+DELIMITER ;
+
+CALL insert_sample_zzims_2();
+
 SELECT * FROM members;
 SELECT * FROM building;
 SELECT * FROM feed;
@@ -448,3 +513,4 @@ SELECT * FROM feed_attachment;
 SELECT * FROM tag;
 SELECT * FROM tag_feed;
 SELECT * FROM feed_comment;
+SELECT * FROM feed_votes;
