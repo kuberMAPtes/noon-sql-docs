@@ -693,6 +693,13 @@ CREATE TABLE feed_votes (
     voter_ids JSON NOT NULL,
     FOREIGN KEY (feed_id) REFERENCES feed(feed_id)
 );
+
+CREATE TABLE feed_event (
+    feed_id INT PRIMARY KEY,
+    event_date DATETIME NOT NULL,
+    FOREIGN KEY (feed_id) REFERENCES feed(feed_id)
+);
+
 CREATE TABLE feed_comment (
     comment_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     feed_id INT NOT NULL,
