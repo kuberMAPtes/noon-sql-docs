@@ -650,7 +650,7 @@ CREATE INDEX idx_members_nickname ON members(nickname);
     
     CREATE TABLE feed (
 feed_id INT PRIMARY KEY AUTO_INCREMENT,
-writer_id VARCHAR(20) NOT NULL,
+writer_id VARCHAR(50) NOT NULL,
 building_id INT NULL,
 main_activated BOOLEAN NOT NULL DEFAULT FALSE, 
 public_range ENUM('PUBLIC','FOLLOWER_ONLY','MUTUAL_ONLY','PRIVATE') NOT NULL DEFAULT 'PUBLIC',
@@ -674,7 +674,7 @@ zzim_id INT PRIMARY KEY AUTO_INCREMENT,
 member_id VARCHAR(50),
 feed_id INT NULL,
 building_id INT NULL,
-subscription_provider_id VARCHAR(20) NULL,
+subscription_provider_id VARCHAR(50) NULL,
 zzim_type ENUM('LIKE','BOOKMARK','SUBSCRIPTION') NOT NULL,
 activated BOOLEAN NOT NULL,
 FOREIGN KEY (member_id) REFERENCES members(member_id),
@@ -703,7 +703,7 @@ CREATE TABLE feed_event (
 CREATE TABLE feed_comment (
     comment_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     feed_id INT NOT NULL,
-    commenter_id VARCHAR(20) NOT NULL,
+    commenter_id VARCHAR(50) NOT NULL,
     comment_text VARCHAR(4000) NOT NULL,
     written_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     activated BOOLEAN NOT NULL,
@@ -738,7 +738,7 @@ CREATE TABLE tag_feed (
 ALTER TABLE tag_feed AUTO_INCREMENT = 10000;
 CREATE TABLE notification (
     notification_id INT PRIMARY KEY AUTO_INCREMENT,
-    receiver_id VARCHAR(20) NOT NULL,
+    receiver_id VARCHAR(50) NOT NULL,
     notification_text VARCHAR(300) NOT NULL,
     notification_type ENUM('COMMENT','LIKE','REPORT') NOT NULL,
     FOREIGN KEY (receiver_id) REFERENCES members(member_id)
@@ -746,8 +746,8 @@ CREATE TABLE notification (
 ALTER TABLE notification AUTO_INCREMENT = 10000;
 CREATE TABLE report (
     report_id INT PRIMARY KEY AUTO_INCREMENT,
-    reporter_id VARCHAR(20) NOT NULL,
-    reportee_id VARCHAR(20) NOT NULL,
+    reporter_id VARCHAR(50) NOT NULL,
+    reportee_id VARCHAR(50) NOT NULL,
     report_status ENUM('PEND', 'ACCEPT', 'REJECT') NOT NULL DEFAULT 'PEND',
     report_text VARCHAR(1000) NOT NULL,
     reported_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -758,8 +758,8 @@ CREATE TABLE report (
 ALTER TABLE report AUTO_INCREMENT = 10000;
 CREATE TABLE member_relationship (
     member_relationship_id INT PRIMARY KEY AUTO_INCREMENT,
-    from_id VARCHAR(20) NOT NULL,
-    to_id VARCHAR(20) NOT NULL,
+    from_id VARCHAR(50) NOT NULL,
+    to_id VARCHAR(50) NOT NULL,
     relationship_type ENUM('FOLLOW','BLOCK') NOT NULL,
     activated BOOLEAN NOT NULL DEFAULT TRUE,
     FOREIGN KEY (from_id) REFERENCES members(member_id),
@@ -769,8 +769,8 @@ ALTER TABLE member_relationship AUTO_INCREMENT = 10000;
 -- chat_apply 테이블 생성
 CREATE TABLE chat_apply (
     chat_apply_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    applicant_id VARCHAR(20) NOT NULL,
-    respondent_id VARCHAR(20) NOT NULL,
+    applicant_id VARCHAR(50) NOT NULL,
+    respondent_id VARCHAR(50) NOT NULL,
     apply_message VARCHAR(400),
     reject_message VARCHAR(400),
     activated BOOLEAN NOT NULL DEFAULT TRUE,
@@ -781,7 +781,7 @@ ALTER TABLE chat_apply AUTO_INCREMENT = 10000;
 -- chatroom 테이블 생성
 CREATE TABLE chatroom (
     chatroom_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    chatroom_creator_id VARCHAR(20) NOT NULL,
+    chatroom_creator_id VARCHAR(50) NOT NULL,
     building_id INT,
     chatroom_name VARCHAR(50) NOT NULL,
     chatroom_type ENUM('PRIVATE_CHATTING','GROUP_CHATTING') NOT NULL,
